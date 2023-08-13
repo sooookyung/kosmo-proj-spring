@@ -1,3 +1,7 @@
+drop table board;
+drop table member;
+drop table diner;
+
 create table diner (
     seq number(5) generated always as identity(start with 1 increment by 1) primary key not null,
     name varchar2(60) not null,
@@ -16,7 +20,7 @@ create table member (
 
 create table board (
     seq number(7) generated always as identity(start with 1 increment by 1) primary key not null,
-    title varchar2(30) not null,
+    title varchar2(30),
     content long not null,
     writer varchar2(60) not null,
     foreign key (writer) references member (email),
