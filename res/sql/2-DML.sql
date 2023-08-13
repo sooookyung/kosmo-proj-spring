@@ -8,5 +8,3 @@ insert into diner (name, location, category) values ('야상해', '용산구', '
 
 insert into board (title, content, writer, diner_seq, parent) values ('여기 맛있음', 'ㄱㄱ', 'sol@bhs.com', 3, null);
 insert into board (title, content, writer, diner_seq, parent) values ('', 'ㄹㅇ', 'sol@bhs.com', 3, 1);
-
-alter table board drop constraint SYS_C009126;
