@@ -1,4 +1,4 @@
-package com.bhs.server;
+package com.bhs.server.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
