@@ -6,5 +6,5 @@ insert into MEMBER (email, nickname, pwd, name, ph, age) values ('sang@bhs.com',
 insert into diner (name, location, category) values ('카레', '성북구', '인도');
 insert into diner (name, location, category) values ('야상해', '용산구', '중식');
 
-insert into board (title, content, writer, diner_seq, parent) values ('여기 맛있음', 'ㄱㄱ', 'sol@bhs.com', 3, null);
-insert into board (title, content, writer, diner_seq, parent) values ('', 'ㄹㅇ', 'sol@bhs.com', 3, 1);
+insert into board (title, content, writer, diner_seq, parent) values ('여기 맛있음', 'ㄱㄱ', 'sol@bhs.com', (select seq from diner where name='카레'), null);
+insert into board (title, content, writer, diner_seq, parent) values ('', 'ㄹㅇ', 'sol@bhs.com', (select seq from diner where name='카레'), (select seq from board where title='여기 맛있음'));
