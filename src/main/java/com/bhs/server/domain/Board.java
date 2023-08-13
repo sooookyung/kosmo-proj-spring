@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-class Board {
+public class Board {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int seq;
@@ -26,14 +26,14 @@ class Board {
     private Date rdate;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "email")
+    @JoinColumn(name = "writer")
     private Member writer;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "seq")
-    private Diner dinerSeq;
+    @JoinColumn(name = "diner_seq")
+    private Diner diner;
     
     @ManyToOne(optional = true)
-    @JoinColumn(name = "seq")
+    @JoinColumn(name = "parent")
     private Board parent;
 }

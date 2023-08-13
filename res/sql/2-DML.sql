@@ -2,9 +2,12 @@ insert into MEMBER (email, nickname, pwd, name, ph, age) values ('bhs123@bhs.com
 insert into MEMBER (email, nickname, pwd, name, ph, age) values ('sol@bhs.com', 'sol', '1234', '배솔반', '01012341234', 28);
 insert into MEMBER (email, nickname, pwd, name, ph, age) values ('hsk@bhs.com', 'hsk', '1234', '홍수경', '01003568900', 20);
 insert into MEMBER (email, nickname, pwd, name, ph, age) values ('sang@bhs.com', 'sang', '1234', '서상록', '01014702580', 25);
+commit;
 
 insert into diner (name, location, category) values ('카레', '성북구', '인도');
 insert into diner (name, location, category) values ('야상해', '용산구', '중식');
+commit;
 
 insert into board (title, content, writer, diner_seq, parent) values ('여기 맛있음', 'ㄱㄱ', 'sol@bhs.com', (select seq from diner where name='카레'), null);
 insert into board (title, content, writer, diner_seq, parent) values ('', 'ㄹㅇ', 'sol@bhs.com', (select seq from diner where name='카레'), (select seq from board where title='여기 맛있음'));
+commit;

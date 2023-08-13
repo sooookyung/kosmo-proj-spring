@@ -22,6 +22,7 @@ create table board (
     seq number(7) generated always as identity(start with 1 increment by 1) primary key not null,
     title varchar2(30),
     content long not null,
+    rdate date default sysdate not null,
     writer varchar2(60) not null,
     foreign key (writer) references member (email),
     diner_seq number(5) not null,
