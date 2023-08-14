@@ -326,7 +326,7 @@
                 <img src="/css/imgs/sign_up.png" class="signup-image">
             </div>
         </header>
-        <form name="jf" action="join_ok/" method="POST">
+        <form name="jf" action="join.do" method="POST">
         <input type="hidden" name="csrfmiddlewaretoken" value="VkkZagUmeEvZXBUt1fR1wxyfpb1Z0BjUDbIQZ5mvRkM3dge3fPdsDDJa45plpAOo">
             <div class="signup-first">
                 <h3>이메일</h3>

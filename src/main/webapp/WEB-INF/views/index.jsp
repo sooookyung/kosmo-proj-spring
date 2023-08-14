@@ -24,7 +24,7 @@
       <ul class="nav-sign nav-sign-list">
         
         <button id="login_button">LOGIN</button>
-        <button onclick="location.href='/join/'">SIGN UP</button >
+        <button onclick="location.href='/join.do'">SIGN UP</button>
         
         
 <html lang="ko">
