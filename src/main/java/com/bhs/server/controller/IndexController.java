@@ -10,4 +10,9 @@ public class IndexController {
     public String index() {
         return "redirect:index.do";
     }
+
+    @GetMapping("index.do")
+    public String indexDo() {
+        return "index";
+    }
 }

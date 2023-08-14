@@ -6,8 +6,8 @@
 <head>
     meta charset="UTF-8">
     <title>Tropical Night Litchi-Root : sign-up</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/login_join.css">
-    <script src="/static/js/trim.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login_join.css">
+    <script src="/js/trim.js"></script>
     <script languege="javascript">
         const regExp = /[!?@#$%^&*():;+-=~{}<>\_\[\]\|\\\"\'\,\.\/\`\₩]/g; //전체에서 특수문자 찾기
         const blankExp = /\s/g; //전체에서 공백찾기 
@@ -177,12 +177,12 @@
 
 <body style="margin:0">
     
-<link rel="stylesheet" type="text/css" href="/static/css/nav.css" />
+<link rel="stylesheet" type="text/css" href="/css/nav.css" />
 
 <nav class="nav-main">
   <header class="nav-header" id="header">
     <h1 class="nav-header-heading">
-      <a href="/" title="메인 화면"><img src="/static/css/imgs/logo.png" class="nav-image"></a>
+      <a href="/" title="메인 화면"><img src="/css/imgs/logo.png" class="nav-image"></a>
     </h1>
     <div class="nav-sign">
       <ul class="nav-sign nav-sign-list">
@@ -195,8 +195,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Tropical Night Litchi-Root : login</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/login_join.css">
-    <script src="/static/js/trim.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login_join.css">
+    <script src="/js/trim.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function check_login(){
@@ -248,7 +248,7 @@
         <div class="login-content"> 
             <span class="login-close-button">&times;</span> 
             <div class="login-header">
-                <img src="/static/css/imgs/logo.png" class="image-login">
+                <img src="/css/imgs/logo.png" class="image-login">
             </div>
             <p></p>    
             <form name="lf" action="/login_ok/" method="post">
@@ -323,7 +323,7 @@
     <div class = "signup-body"> 
         <header>
             <div class="signup-logo">
-                <img src="/static/css/imgs/sign_up.png" class="signup-image">
+                <img src="/css/imgs/sign_up.png" class="signup-image">
             </div>
         </header>
         <form name="jf" action="join_ok/" method="POST">
@@ -376,7 +376,7 @@
     </div>
 </body>
 
-<link rel="stylesheet" type="text/css" href="/static/css/footer.css" />
+<link rel="stylesheet" type="text/css" href="/css/footer.css" />
 
 <footer class="footer-main">
   <ul class="footer-corp">

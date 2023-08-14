@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tropical Night Litchi-Root</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/list.css">
+    <link rel="stylesheet" type="text/css" href="/css/list.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="/static/js/bootstrap.js"></script>
-    <script src="/static/js/trim.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/trim.js"></script>
 	<script language="javascript">
 		function check_apply(co, co_no, re_no){
 			var is_apply = confirm('[ ' + co + ' ] 사로 지원하시겠습니까?');
@@ -24,12 +24,12 @@
 </head>
 
 
-<link rel="stylesheet" type="text/css" href="/static/css/nav.css" />
+<link rel="stylesheet" type="text/css" href="/css/nav.css" />
 
 <nav class="nav-main">
   <header class="nav-header" id="header">
     <h1 class="nav-header-heading">
-      <a href="/" title="메인 화면"><img src="/static/css/imgs/logo.png" class="nav-image"></a>
+      <a href="/" title="메인 화면"><img src="/css/imgs/logo.png" class="nav-image"></a>
     </h1>
     <div class="nav-sign">
       <ul class="nav-sign nav-sign-list">
@@ -42,8 +42,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Tropical Night Litchi-Root : login</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/login_join.css">
-    <script src="/static/js/trim.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/login_join.css">
+    <script src="/js/trim.js"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         function check_login(){
@@ -95,7 +95,7 @@
         <div class="login-content"> 
             <span class="login-close-button">&times;</span> 
             <div class="login-header">
-                <img src="/static/css/imgs/logo.png" class="image-login">
+                <img src="/css/imgs/logo.png" class="image-login">
             </div>
             <p></p>    
             <form name="lf" action="/login_ok/" method="post">
@@ -216,7 +216,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tropical Night Litchi-Root</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/search.css">
+    <link rel="stylesheet" type="text/css" href="/css/search.css">
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -720,7 +720,7 @@
     </div>            
 </body>
 
-<link rel="stylesheet" type="text/css" href="/static/css/footer.css" />
+<link rel="stylesheet" type="text/css" href="/css/footer.css" />
 
 <footer class="footer-main">
   <ul class="footer-corp">
