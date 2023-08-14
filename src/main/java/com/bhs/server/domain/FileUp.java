@@ -23,14 +23,14 @@ public class FileUp {
     private String orgnm;
     private String savednm;
     private String savedpath;
-    private String contenttype;
+    private String contentType;
 
     @Builder
-    public FileUp(long id, String orgnm, String savednm, String savedpath, String contenttype) {
+    public FileUp(long id, String orgnm, String savednm, String savedpath, String contentType) {
         this.id = id;
         this.orgnm = orgnm;
         this.savednm = savednm;
         this.savedpath = savedpath;
-        this.contenttype = contenttype;
+        this.contentType = contentType;
     }
 }
