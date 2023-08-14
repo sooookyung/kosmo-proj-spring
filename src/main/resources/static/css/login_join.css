@@ -2,22 +2,27 @@
     font-family: noto-black;
     src: url(font/notosans/NotoSansKR-Black.otf);
 }
+
 @font-face {
     font-family: noto-bold;
     src: url(font/notosans/NotoSansKR-Bold.otf);
 }
+
 @font-face {
     font-family: noto-light;
     src: url(font/notosans/NotoSansKR-Light.otf);
 }
+
 @font-face {
     font-family: noto-medium;
     src: url(font/notosans/NotoSansKR-Medium.otf);
 }
+
 @font-face {
     font-family: noto-regular;
     src: url(font/notosans/NotoSansKR-Regular.otf);
 }
+
 @font-face {
     font-family: noto-thin;
     src: url(font/notosans/NotoSansKR-Thin.otf);
@@ -25,20 +30,20 @@
 
 
 /*  조인 바디  */
-.signup-body{
+.signup-body {
     text-align: center;
-    margin:auto;
+    margin: auto;
     padding-top: 12rem;
     width: 35%;
 }
 
-.signup-first{
-    
+.signup-first {
+
     display: inline-block;
     text-align: center;
 }
 
-.signup-body h3{
+.signup-body h3 {
     margin: 19px 0px 8px;
     text-align: left;
     font-size: 0.8rem;
@@ -46,23 +51,23 @@
     font-family: noto-bold;
 }
 
-.signup-logo{
+.signup-logo {
     text-align: center;
-    
+
 }
 
-.signup-logo a{
+.signup-logo a {
     display: inherit;
     align-items: center;
 }
 
-.signup-logo .signup-image{
+.signup-logo .signup-image {
     height: 100px;
     margin-top: 40px;
 }
 
-.signup-input{
-    display:flex;
+.signup-input {
+    display: flex;
     width: 400px;
     padding: 5px;
     border: solid 1px #FFB8AB;
@@ -72,19 +77,21 @@
     cursor: default;
 }
 
-.signup-input #email, #pwd, #check_pwd{
+.signup-input #email,
+#pwd,
+#check_pwd {
     height: 29px;
     border: none;
-    outline:none;
+    outline: none;
     padding-left: 2%;
-    width:100%;
+    width: 100%;
     font-size: 0.9em;
     border-radius: 6px;
     color: #502c19;
     font-family: noto-regular;
 }
 
-.signup-pwd-image{
+.signup-pwd-image {
     top: 50%;
     right: 13px;
     width: 24px;
@@ -95,16 +102,19 @@
     cursor: pointer;
 }
 
-.signup-select{
+.signup-select {
     display: inline-block;
     text-align: center;
 }
 
-.signup-select #name, #gender, #phone{
-    width : 100%;
+.signup-select #name,
+#ph,
+#age,
+#nickname {
+    width: 100%;
     height: 29px;
     border: none;
-    outline : none;
+    outline: none;
     padding-left: 2%;
     font-size: 0.9em;
     border-radius: 6px;
@@ -112,34 +122,30 @@
     font-family: noto-regular;
 }
 
-.signup-select #gender{
-    background-color: white;
-    cursor: pointer;
-}
 
-.signup-join{
+.signup-join {
     display: inline-block;
     text-align: center;
     margin-top: 25px;
     margin-bottom: 30px;
     width: 50%;
-    height:50px;
+    height: 50px;
 }
 
-.signup-join .signup-btn{
-    width : 100%;
+.signup-join .signup-btn {
+    width: 100%;
     height: 100%;
     background-color: #F88b74;
     border: none;
-    color:#fff;
+    color: #fff;
     font-size: 1.5rem;
-    outline:none;
+    outline: none;
     cursor: pointer;
     border-radius: 20px;
     font-family: noto-bold;
 }
 
-.signup-join .signup-btn:hover{
+.signup-join .signup-btn:hover {
     color: #F88b74;
     background-color: #F54927;
 }
@@ -148,7 +154,7 @@
 
 
 /*  로그인  */
-.login-body{
+.login-body {
     position: fixed;
     left: 0;
     top: 0;
@@ -161,7 +167,7 @@
     transition: visibility 0s linear 0.25s, opacity 0.25s, 0s, transform 0.25s;
 }
 
-.login-content{
+.login-content {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -173,42 +179,42 @@
     border-radius: 0.5rem;
 }
 
-.login-close-button{
+.login-close-button {
     float: right;
     width: 1.5rem;
     line-height: 1.5rem;
     text-align: center;
     cursor: pointer;
-    border-radius: 1.5rem;   
+    border-radius: 1.5rem;
     background-color: #F2F2F2;
 }
 
-.login-header{
+.login-header {
     display: inline-block;
     width: 100%;
     align-items: center;
 }
 
-.login-header .image-login{
+.login-header .image-login {
     display: block;
     height: 100px;
     margin: auto;
 }
 
-.show-login{
+.show-login {
     opacity: 1;
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.login-content form{
+.login-content form {
     height: 370px;
     padding: 10px 10px;
     text-align: center;
 }
 
-.login-label{
+.login-label {
     display: inline-block;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -218,11 +224,11 @@
     font-family: noto-regular;
 }
 
-.login-input{
-    width : 400px;
+.login-input {
+    width: 400px;
     height: 40px;
     border: none;
-    outline : none;
+    outline: none;
     padding-left: 2%;
     font-size: 0.9em;
     border-radius: 6px;
@@ -230,18 +236,18 @@
     font-family: noto-regular;
 }
 
-.login-input:focus{
+.login-input:focus {
     border: 1px solid #F54927;
 }
 
-.login-btn-group{
+.login-btn-group {
     margin-top: 50px;
     padding: 10px 10px;
 }
 
-.login_submit{
+.login_submit {
     height: 48px;
-    width:40%;
+    width: 40%;
     text-align: center;
     border: none;
     border-radius: 20px;
@@ -251,14 +257,15 @@
     margin-right: 10px;
     font-family: noto-bold;
 }
-.login_submit:hover{
+
+.login_submit:hover {
     color: #fff;
     background-color: #F54927;
 }
 
-.login_cancel{
+.login_cancel {
     height: 48px;
-    width:40%;
+    width: 40%;
     text-align: center;
     border: none;
     border-radius: 20px;
@@ -268,7 +275,8 @@
     background-color: #F88b74;
     font-family: noto-bold;
 }
-.login_cancel:hover{
+
+.login_cancel:hover {
     color: #fff;
     background-color: #F54927;
 }
@@ -278,26 +286,27 @@ input[type="number"]::-webkit-inner-spin-button {
     margin: 0;
 }
 
-@media (max-width: 1300px){
+@media (max-width: 1300px) {
 
     .signup-join .signup-btn {
         width: 250px;
         font-size: 1.2rem;
     }
-    .signup-logo .signup-image{
+
+    .signup-logo .signup-image {
         height: 100px;
         margin-top: 30px;
         margin-left: 35px;
     }
 }
 
-@media (max-width: 950px){
+@media (max-width: 950px) {
     .signup-join .signup-btn {
         width: 200px;
         font-size: 1.2rem;
     }
 
-    .signup-logo .signup-image{
+    .signup-logo .signup-image {
         height: 100px;
         margin-top: 40px;
         margin-left: 50px;
@@ -306,141 +315,167 @@ input[type="number"]::-webkit-inner-spin-button {
 
 
 
-@media (max-width: 800px){
-    .signup-body{
+@media (max-width: 800px) {
+    .signup-body {
         margin-left: 150px;
     }
-    .signup-input{
+
+    .signup-input {
         width: 300px;
     }
-    .signup-body form{
-        width:450px;
+
+    .signup-body form {
+        width: 450px;
     }
 
     .signup-join .signup-btn {
 
         font-size: 1.2rem;
     }
-    .signup-logo .signup-image{
+
+    .signup-logo .signup-image {
         height: 100px;
         margin-top: 40px;
         margin-left: 95px;
     }
 }
 
-@media (max-width: 600px){
-    .signup-body{
+@media (max-width: 600px) {
+    .signup-body {
         margin-left: 120px;
     }
-    .signup-body form{
-        width:350px;
+
+    .signup-body form {
+        width: 350px;
     }
-    .signup-input{
+
+    .signup-input {
         width: 250px;
         font-size: 0.8rem;
     }
-    .signup-logo .signup-image{
+
+    .signup-logo .signup-image {
         height: 100px;
         margin-top: 40px;
         margin-left: 45px;
     }
 }
 
-@media (max-width: 550px){
-    .signup-body{
+@media (max-width: 550px) {
+    .signup-body {
         margin-left: 60px;
     }
-    .login-content{
-        width:440px;
+
+    .login-content {
+        width: 440px;
     }
-    .login-input{
-        width:330px;
-    
+
+    .login-input {
+        width: 330px;
+
     }
-    .login_submit{
+
+    .login_submit {
         width: 150px;
         font-size: 1rem;
     }
-    .login_cancel{
+
+    .login_cancel {
         width: 150px;
         font-size: 1rem;
     }
 }
 
-@media (max-width: 450px){
-    .signup-body{
+@media (max-width: 450px) {
+    .signup-body {
         margin-left: 80px;
     }
-    .signup-input{
+
+    .signup-input {
         font-size: 0.7rem;
     }
-    .signup-body form{
-        width:250px;
+
+    .signup-body form {
+        width: 250px;
     }
+
     .signup-join .signup-btn {
         font-size: 0.8rem;
         margin-left: -25px;
     }
-    .signup-logo .signup-image{
+
+    .signup-logo .signup-image {
         height: 100px;
         margin-top: 45px;
         margin-left: -10px;
     }
-    .login-content{
-        width:400px;
+
+    .login-content {
+        width: 400px;
     }
-    .login-input{
-        width:330px;
-    
+
+    .login-input {
+        width: 330px;
+
     }
-    .login_submit{
+
+    .login_submit {
         width: 150px;
         font-size: 1rem;
     }
-    .login_cancel{
+
+    .login_cancel {
         width: 150px;
         font-size: 1rem;
     }
 }
 
-@media (max-width: 370px){
-    .signup-body{
+@media (max-width: 370px) {
+    .signup-body {
         margin-left: 60px;
     }
-    .signup-input{
+
+    .signup-input {
         font-size: 0.7rem;
     }
-    .signup-body form{
-        width:250px;
+
+    .signup-body form {
+        width: 250px;
         margin-left: 15px
     }
+
     .signup-join .signup-btn {
         font-size: 0.8rem;
         margin-left: -30px;
     }
-    .signup-logo .signup-image{
+
+    .signup-logo .signup-image {
         height: 100px;
         margin-top: 40px;
         margin-left: 5px;
     }
-    .login-header .image-login{
+
+    .login-header .image-login {
         display: block;
         height: 80px;
         margin: auto;
     }
 
-    .login-content{
-        width:300px;
+    .login-content {
+        width: 300px;
     }
-    .login-input{
-        width:230px;
-    
+
+    .login-input {
+        width: 230px;
+
     }
-    .login_submit{
+
+    .login_submit {
         width: 100px;
         font-size: 1rem;
     }
-    .login_cancel{
+
+    .login_cancel {
         width: 100px;
         font-size: 1rem;
     }
