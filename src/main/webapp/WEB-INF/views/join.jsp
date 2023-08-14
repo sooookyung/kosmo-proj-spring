@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=utf-8"%>
-<%@ taglib prefix="sql" uri="jakarta.tags.sql" %> 
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>  
 <!DOCTYPE html>
 
 <html lang="ko">
