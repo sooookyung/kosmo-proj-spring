@@ -50,11 +50,11 @@
                         alert("Password를 입력해 주세요");
                         pwdFoc.focus();
                         return false;
-                    // } else if (!checkPwd(pwdVal)) {
-                    //     alert("Password는 영문,숫자,특수문자를 혼합하여 6~60자로 입력해 주세요");
-                    //     pwdVal = "";
-                    //     pwdFoc.focus();
-                    //     return false;
+                        // } else if (!checkPwd(pwdVal)) {
+                        //     alert("Password는 영문,숫자,특수문자를 혼합하여 6~60자로 입력해 주세요");
+                        //     pwdVal = "";
+                        //     pwdFoc.focus();
+                        //     return false;
                     } else if (blankExp.test(pwdVal)) {
                         alert("Password는 공백이 포함될 수 없습니다");
                         pwdVal = "";
@@ -306,13 +306,13 @@
                 </header>
                 <ul class="nav-menu">
                     <li class="nav-menu-item">
-                        <a href="/introduce/" class="menu-heading">LITCHI ROOT</a>
+                        <a href="/introduce/" class="menu-heading">ABOUT BHS</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="/list/" class="menu-heading">모집공고</a>
+                        <a href="/list/" class="menu-heading">게시판</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="/apply/0/0" class="menu-heading">입사지원</a>
+                        <a href="/apply/0/0" class="menu-heading">지도</a>
                     </li>
                     <li class="nav-menu-item">
                         <a href="/myPage/" class="menu-heading">지원목록</a>

@@ -98,7 +98,7 @@
                                 <div class="login-content">
                                     <span class="login-close-button">&times;</span>
                                     <div class="login-header">
-                                        <img src="/css/imgs/logo.png" class="image-login">
+                                        <img src="/css/imgs/main_logo.png" class="image-login">
                                     </div>
                                     <p></p>
                                     <form name="lf" action="/login_ok/" method="post">
@@ -182,43 +182,8 @@
                     <span>당신의 도전이 새로운 미래를 만듭니다.</span>
                 </div>
                 <div class="col-lt">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     <span> 15 개의 모집공고가 있습니다.</span>
-
-
-
                     <!DOCTYPE html>
-
                     <html lang="ko">
 
                     <head>
