@@ -181,7 +181,7 @@
 									const searchField = document.querySelector("#search-diner");
 									searchField.addEventListener("keydown", (event) => {
 										if (event.keyCode === 13) {
-											const query = event.target.value;
+											const query = event.target.value; // 검색어
 											fetch("/search/diner.do?q=" + query, {method: "GET"}).then((response) => {
 												return response.json();
 											}).then((json) => {
