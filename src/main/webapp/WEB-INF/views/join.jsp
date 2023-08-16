@@ -50,11 +50,11 @@
                         alert("Password를 입력해 주세요");
                         pwdFoc.focus();
                         return false;
-                    } else if (!checkPwd(pwdVal)) {
-                        alert("Password는 영문,숫자,특수문자를 혼합하여 6~60자로 입력해 주세요");
-                        pwdVal = "";
-                        pwdFoc.focus();
-                        return false;
+                    // } else if (!checkPwd(pwdVal)) {
+                    //     alert("Password는 영문,숫자,특수문자를 혼합하여 6~60자로 입력해 주세요");
+                    //     pwdVal = "";
+                    //     pwdFoc.focus();
+                    //     return false;
                     } else if (blankExp.test(pwdVal)) {
                         alert("Password는 공백이 포함될 수 없습니다");
                         pwdVal = "";
@@ -145,14 +145,14 @@
                 }
 
                 // 비밀번호 형식 체크 기능
-                function checkPwd(str) {
-                    var regExp = /^.*(?=^.{6,60}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
-                    if (!regExp.test(str)) {
-                        return false;
-                    } else {
-                        return true;
-                    }
-                }
+                // function checkPwd(str) {
+                //     var regExp = /^.*(?=^.{6,60}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/;
+                //     if (!regExp.test(str)) {
+                //         return false;
+                //     } else {
+                //         return true;
+                //     }
+                // }
 
                 // 바이트 체크 기능(모델 Max-length 제한치 적용)
                 function check_byte(str) {
