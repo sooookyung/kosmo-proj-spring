@@ -248,17 +248,41 @@
 							<div class="modal-body">
 								<ul class="nav nav-pills nav-fill">
 									<li class="nav-item" role="presentation">
-										<button class="nav-link active" id="search-tab" data-bs-toggle="tab" data-bs-target="#search-tab-pane" type="button" role="tab" aria-controls="search-tab-pane" aria-selected="true">검색</button>
+										<button class="nav-link active" id="search-tab" data-bs-toggle="tab"
+											data-bs-target="#search-tab-pane" type="button" role="tab"
+											aria-controls="search-tab-pane" aria-selected="true">검색</button>
 									</li>
 									<li class="nav-item" role="presentation">
-										<button class="nav-link" id="create-tab" data-bs-toggle="tab" data-bs-target="#create-tab-pane" type="button" role="tab" aria-controls="create-tab-pane" aria-selected="false">등록</button>
+										<button class="nav-link" id="create-tab" data-bs-toggle="tab"
+											data-bs-target="#create-tab-pane" type="button" role="tab"
+											aria-controls="create-tab-pane" aria-selected="false">등록</button>
 									</li>
 								</ul>
 								<div class="tab-content" id="myTabContent">
+
 									<div class="tab-pane fade show active" id="search-tab-pane" role="tabpanel"
-										aria-labelledby="search-tab" tabindex="0">search</div>
+										aria-labelledby="search-tab" tabindex="0">
+										<form>
+											<div class="mb-3">
+												<label for="search-diner" class="form-label">맛집 이름 검색</label>
+												<input type="text" class="form-control" id="search-diner"
+													aria-describedby="searchHelp">
+												<div id="searchHelp" class="form-text">맛집의 이름을 입력해 주세요!</div>
+											</div>
+										</form>
+									</div>
+
 									<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
-										aria-labelledby="create-tab" tabindex="0">create</div>
+										aria-labelledby="create-tab" tabindex="0">
+										<form>
+											<div class="mb-3">
+												<label for="add-diner" class="form-label">맛집 등록</label>
+												<input type="text" class="form-control" id="add-diner"
+													aria-describedby="add-dinerHelp">
+												<div id="add-dinerHelp" class="form-text">당신만이 아는 맛집을 공유해주세요!</div>
+											</div>
+										</form>
+									</div>
 								</div>
 
 							</div>
