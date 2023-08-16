@@ -13,7 +13,7 @@ import com.bhs.server.service.BoardService;
 public class BoardController {
     @Autowired
     BoardService service;
-    
+
     @GetMapping("/list.do")
     public String board(Model model) {
         model.addAttribute("list", service.list());
@@ -24,4 +24,5 @@ public class BoardController {
     public String write() {
         return "write";
     }
+
 }
