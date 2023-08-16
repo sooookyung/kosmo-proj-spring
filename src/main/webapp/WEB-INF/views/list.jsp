@@ -419,7 +419,7 @@
                             <c:forEach items="${list}" var="board">
                                 <tr>
                                     <th scope="row">${board.seq}</th>
-                                    <td>${board.writer}</td>
+                                    <td>${board.writer.nickname}</td>
                                     <td>${board.title}</td>
                                     <td>${board.rdate}</td>
                                   </tr>
