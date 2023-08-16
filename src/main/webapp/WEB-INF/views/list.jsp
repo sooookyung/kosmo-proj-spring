@@ -157,13 +157,13 @@
             </header>
             <ul class="nav-menu">
                 <li class="nav-menu-item">
-                    <a href="/introduce/" class="menu-heading">LITCHI ROOT</a>
+                    <a href="/introduce/" class="menu-heading">ABOUT BHS</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="/list/" class="menu-heading">모집공고</a>
+                    <a href="/list/" class="menu-heading">게시판</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="/apply/0/0" class="menu-heading">입사지원</a>
+                    <a href="/apply/0/0" class="menu-heading">지도</a>
                 </li>
                 <li class="nav-menu-item">
                     <a href="/myPage/" class="menu-heading">지원목록</a>
@@ -178,8 +178,8 @@
         <body style="margin:0">
             <div class="list-main">
                 <div class="list-title">
-                    <p>모집공고</p>
-                    <span>당신의 도전이 새로운 미래를 만듭니다.</span>
+                    <p>게시판</p>
+                    <span></span>
                 </div>
                 <div class="col-lt">
                     <!DOCTYPE html>
@@ -284,7 +284,7 @@
                     </head>
 
                     <div class="jobs_search_box">
-                        <strong>관심 있는 공고를<br> 편리하게 찾아보세요.</strong>
+                        <strong>관심 있는 맛집을<br>찾아보세요</strong>
                         <div class="jobs_search_field">
                             <form name="f" action="/list/" method="post">
                                 <input type="hidden" name="csrfmiddlewaretoken"
@@ -292,18 +292,18 @@
                                 <div class="field1">
                                     <select class="field1-s" name="company" id="company" title="관계사 선택"
                                         onchange="onchange_fun(1)">
-                                        <option class="field1-sel" value="primary" selected>회사</option>
+                                        <option class="field1-sel" value="primary" selected>카테고리</option>
 
 
-                                        <option class="field1-sel" value="1">Bang SOFT</option>
+                                        <option class="field1-sel" value="1">한식</option>
 
-                                        <option class="field1-sel" value="2">IDLE</option>
+                                        <option class="field1-sel" value="2">양식</option>
 
-                                        <option class="field1-sel" value="3">Tuna Salad</option>
+                                        <option class="field1-sel" value="3">중식</option>
 
-                                        <option class="field1-sel" value="4">Fantastic 4</option>
+                                        <option class="field1-sel" value="4">일식</option>
 
-                                        <option class="field1-sel" value="5">TN World Legend Bomi</option>
+                                        <option class="field1-sel" value="5">디저트</option>
 
 
                                     </select>
@@ -404,13 +404,16 @@
                             margin: 50px;
                             width: 70%;
                         }
+
                         .table-bhs {
                             --bs-table-striped-bg: rgba(250, 50, 0, 0.15);
                         }
+
                         .table-header-button {
                             display: flex;
                             justify-content: end;
                         }
+
                         .btn-light {
                             --bs-btn-bg: rgb(255, 104, 40);
                             --bs-btn-border-color: rgba(0, 0, 0, 0);
@@ -423,7 +426,8 @@
                     </style>
                     <div class="table-container">
                         <div class="table-header-button">
-                            <button class="btn btn-light" onclick="location.href='write.do'"><strong>글쓰기</strong></button>
+                            <button class="btn btn-light"
+                                onclick="location.href='write.do'"><strong>글쓰기</strong></button>
                         </div>
                         <table class="table table-bhs table-striped">
                             <thead>
