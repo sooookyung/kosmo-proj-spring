@@ -177,10 +177,24 @@
 										}
 									}
 								});
+								$("document").ready(() => {
+									const searchField = document.querySelector("#search-diner");
+									searchField.addEventListener("keydown", (event) => {
+										if (event.keyCode === 13) {
+											const query = event.target.value;
+											fetch("/search/diner.do", {method: "GET"}).then((response) => {
+												return response.json();
+											}).then((json) => {
+												// json 데이터 핸들링
+											})
+										}
+									});
+								})
 								loginButton.addEventListener("click", togglegodal);
 								closeButton.addEventListener("click", togglegodal);
 								cancelButton.addEventListener("click", togglegodal);
 								window.addEventListener("click", windowOnClick); 
+								
 							</script>
 						</ul>
 					</div>
@@ -268,7 +282,7 @@
 												<input type="text" class="form-control" id="search-diner"
 													aria-describedby="searchHelp">
 												<div id="searchHelp" class="form-text">맛집의 이름을 입력해 주세요!</div>
-												<table class="table">
+												<table class="table table-diner-search">
 													<thead>
 														<tr>
 															<th scope="col">#</th>
@@ -303,14 +317,18 @@
 
 									<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
 										aria-labelledby="create-tab" tabindex="0">
-										<form>
-											<div class="mb-3">
-												<label for="add-diner" class="form-label">맛집 등록</label>
-												<input type="text" class="form-control" id="add-diner"
-													aria-describedby="add-dinerHelp">
-												<div id="add-dinerHelp" class="form-text">당신만이 아는 맛집을 공유해주세요!</div>
-											</div>
-										</form>
+										<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
+										aria-labelledby="create-tab" tabindex="0">
+										<div class="mb-3">
+											<label for="input-diner-name" class="form-label">맛집 이름</label>
+											<input type="text" class="form-control" id="input-diner-name">
+										</div>
+										<div class="mb-3">
+											<label for="input-diner-location" class="form-label">위치</label>
+											<input type="text" class="form-control" id="input-diner-location"
+												readonly>
+										</div>
+									</div>
 									</div>
 								</div>
 
