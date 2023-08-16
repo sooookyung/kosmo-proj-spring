@@ -257,21 +257,62 @@
               LITCHI
               <span>ROOT.</span>
             </p>
+
             <div class="mySlides fade">
-              <img src="css/imgs/bhs_food_image.jpg" style="width:100%">
+              <img src="css/imgs/bhs_main_img3.jpg" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-              <img src="css/imgs/bhs_food_image2.png" style="width:100%">
+              <img src="css/imgs/bhs_main_img.png" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-              <img src="css/imgs/bhs_food_image3.png" style="width:100%">
+              <img src="css/imgs/bhs_main_img2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img4.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img5.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img6.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img7.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img8.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img9.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img10.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="css/imgs/bhs_main_img11.jpg" style="width:100%">
             </div>
             <br>
           </div>
         </div>
         <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
@@ -294,7 +335,7 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 6000); // Change image every 6 seconds
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
           }
         </script>
       </main>
