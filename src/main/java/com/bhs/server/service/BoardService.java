@@ -13,10 +13,10 @@ import com.bhs.server.repository.BoardRepository;
 public class BoardService {
     @Autowired
     private BoardRepository repository;
-    
+
     public List<Board> list() {
-        // return repository.findAll(Sort.by(Sort.Direction.DESC,"seq"));
+        // return repository.findAll(Sort.by(Sort.Direction.DESC,"seq")); //seq내림차순으로 데이터 정렬
         return repository.findByParentIsNullOrderBySeqDesc();
     }
-    
+
 }

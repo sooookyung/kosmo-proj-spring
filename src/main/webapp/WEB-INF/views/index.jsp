@@ -176,10 +176,7 @@
           </p>
           <img class="bhs_food_image" src="/css/imgs/bhs_food_image.jpg" muted autoplay loop></img>
         </div>
-        <figcaption class="index-detail">
-          <span>세상에 없는 기술과</span>
-          <span>새로운 세계를 &nbsp; 향한 도전</span>
-        </figcaption>
+
       </main>
     </body>
 
