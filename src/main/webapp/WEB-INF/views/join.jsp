@@ -172,7 +172,7 @@
             <nav class="nav-main">
                 <header class="nav-header" id="header">
                     <h1 class="nav-header-heading">
-                        <a href="/" title="메인 화면"><img src="/css/imgs/logo.png" class="nav-image"></a>
+                        <a href="/" title="메인 화면"><img src="/css/imgs/main_logo.png" class="nav-image"></a>
                     </h1>
                     <div class="nav-sign">
                         <ul class="nav-sign nav-sign-list">
@@ -246,7 +246,7 @@
                                     <div class="login-content">
                                         <span class="login-close-button">&times;</span>
                                         <div class="login-header">
-                                            <img src="/css/imgs/logo.png" class="image-login">
+                                            <img src="/css/imgs/main_logo.png" class="image-login">
                                         </div>
                                         <p></p>
                                         <form name="lf" action="/login_ok/" method="post">
@@ -396,18 +396,17 @@
 
         <footer class="footer-main">
             <ul class="footer-corp">
-                <li><a href="/terms">홈페이지 이용약관 및 개인정보 처리방침</a></li>
+                <li><a href="#">홈페이지 이용약관 및 개인정보 처리방침</a></li>
             </ul>
             <ul class="footer-info">
-                <li><a href="/map/">찾아오시는 길</a></li>
-                <li><a href="/subsidiary/">계열사</a></li>
-                <li><a href="/list/">모집 공고</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">계열사</a></li>
             </ul>
             <address class="footer-address">
                 <span>사업자등록번호 : 123-45-67890</span>
-                <span>(주)TN COMPANY 대표이사 : 이보미</span>
+                <span>(주)BHS COMPANY 대표 : 솔서ㄴ수범</span>
                 <span>TEL : 1234-1234</span>
-                <span>개인정보 책임자 : 우해인</span>
+                <span>개인정보 책임자 : 배솔반</span>
             </address>
-            <small class="footer-copyringt">&copy; TN Company. All Rights Reserved.</small>
+            <small class="footer-copyringt">&copy; BHS Company. All Rights Reserved.</small>
         </footer>
