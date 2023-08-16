@@ -185,13 +185,13 @@
 				</header>
 				<ul class="nav-menu">
 					<li class="nav-menu-item">
-						<a href="/introduce/" class="menu-heading">LITCHI ROOT</a>
+						<a href="/introduce/" class="menu-heading">ABOUT BHS</a>
 					</li>
 					<li class="nav-menu-item">
-						<a href="/list/" class="menu-heading">모집공고</a>
+						<a href="/list/" class="menu-heading">게시판</a>
 					</li>
 					<li class="nav-menu-item">
-						<a href="/apply/0/0" class="menu-heading">입사지원</a>
+						<a href="/apply/0/0" class="menu-heading">지도</a>
 					</li>
 					<li class="nav-menu-item">
 						<a href="/myPage/" class="menu-heading">지원목록</a>
@@ -205,48 +205,9 @@
 
 			<div class="main">
 				<div class="ask-title">
-					<p>1:1문의</p>
-					<span>답변 및 처리 과정은 이메일로 확인 할 수 있습니다.</span>
+					<p>게시글 작성</p>
 				</div>
-				<div class="selected-items">
-					<div class="select-wrapper-company">
-						<div class="select-company">
-							<div class="select__trigger-company"><span>회사</span>
-								<div class="arrow"></div>
-							</div>
-							<div class="custom-options-company">
-								<span class="custom-option-company selected mustDelete" data-value="">회사</span>
 
-								<span class="custom-option-company" data-value="1">Bang SOFT</span>
-
-
-								<span class="custom-option-company" data-value="2">IDLE</span>
-
-
-								<span class="custom-option-company" data-value="3">Tuna Salad</span>
-
-
-								<span class="custom-option-company" data-value="4">Fantastic 4</span>
-
-
-								<span class="custom-option-company" data-value="5">TN World Legend Bomi</span>
-
-
-								<span class="custom-option-company" data-value="0">기타</span>
-							</div>
-						</div>
-					</div>
-					<div class="select-wrapper-recruitment">
-						<div class="select-recruitment">
-							<div class="select__trigger-recruitment"><span>직종</span>
-								<div class="arrow"></div>
-							</div>
-							<div class="custom-options-recruitment">
-
-							</div>
-						</div>
-					</div>
-				</div>
 				<div class="select-wrapper-content">
 					<form name="f" action="ask_ok" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="csrfmiddlewaretoken"
