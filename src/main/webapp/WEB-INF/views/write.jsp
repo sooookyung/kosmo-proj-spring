@@ -247,14 +247,20 @@
 							</div>
 							<div class="modal-body">
 								<ul class="nav nav-pills nav-fill">
-									<li class="nav-item">
-									  <a class="nav-link active" aria-current="page" href="#">검색</a>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link active" id="search-tab" data-bs-toggle="tab" data-bs-target="#search-tab-pane" type="button" role="tab" aria-controls="search-tab-pane" aria-selected="true">검색</button>
 									</li>
-									<li class="nav-item">
-									  <a class="nav-link" href="#">등록</a>
+									<li class="nav-item" role="presentation">
+										<button class="nav-link" id="create-tab" data-bs-toggle="tab" data-bs-target="#create-tab-pane" type="button" role="tab" aria-controls="create-tab-pane" aria-selected="false">등록</button>
 									</li>
 								</ul>
-								  
+								<div class="tab-content" id="myTabContent">
+									<div class="tab-pane fade show active" id="search-tab-pane" role="tabpanel"
+										aria-labelledby="search-tab" tabindex="0">search</div>
+									<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
+										aria-labelledby="create-tab" tabindex="0">create</div>
+								</div>
+
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
