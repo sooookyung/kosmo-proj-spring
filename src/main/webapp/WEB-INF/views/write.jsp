@@ -71,9 +71,11 @@
 							<head>
 								<meta charset="UTF-8">
 								<title>Tropical Night Litchi-Root : login</title>
+								<link rel="stylesheet" href="/css/bootstrap.css">
 								<link rel="stylesheet" type="text/css" href="/css/login_join.css">
 								<script src="/js/trim.js"></script>
-								<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+								<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+								<script src="/js/bootstrap.js"></script>
 								<script>
 									function check_login() {
 										var loginEmailFoc = document.getElementById('login-email');
@@ -208,18 +210,60 @@
 					<p>게시글 작성</p>
 				</div>
 
+
 				<div class="select-wrapper-content">
 					<form name="f" action="ask_ok" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="csrfmiddlewaretoken"
 							value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
 						<input type="text" name="title" class="input-title" placeholder="제목입력"></br></br>
-						<input type="text" name="diner_seq" class="input-title" placeholder="맛집입력"></br></br>
+						<input type="text" name="diner_seq" class="input-title" placeholder="맛집입력"
+							data-bs-toggle="modal" data-bs-target="#exampleModal" readonly></br></br>
 
 						<textarea name="context" class="input-context"
 							placeholder="내용입력&#13;&#10;답변 및 처리 과정은 이메일로 확인 할 수 있습니다."></textarea></br></br>
 						<input type="button" class="select-wrapper-button" value="작성하기" onclick="check()" />
 						</from>
 				</div>
+				<style>
+					.btn-primary {
+						--bs-btn-bg: rgb(255, 104, 40);
+						--bs-btn-border-color: rgba(0, 0, 0, 0);
+						color: white;
+						--bs-btn-hover-color: white;
+						--bs-btn-active-color: white;
+						--bs-btn-hover-bg: rgb(255, 132, 40);
+						--bs-btn-active-bg: rgb(255, 118, 40);
+					}
+				</style>
+				<!-- Modal -->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+					aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h1 class="modal-title fs-5" id="exampleModalLabel">맛집 입력</h1>
+								<button type="button" class="btn-close" data-bs-dismiss="modal"
+									aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								<ul class="nav nav-pills nav-fill">
+									<li class="nav-item">
+									  <a class="nav-link active" aria-current="page" href="#">검색</a>
+									</li>
+									<li class="nav-item">
+									  <a class="nav-link" href="#">등록</a>
+									</li>
+								</ul>
+								  
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+								<button type="button" class="btn btn-primary" disabled>확인</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
 
 			<link rel="stylesheet" type="text/css" href="/css/footer.css" />
