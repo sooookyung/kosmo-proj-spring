@@ -418,7 +418,7 @@
                             --bs-btn-hover-color: white;
                             --bs-btn-active-color: white;
                             --bs-btn-hover-bg: rgb(255, 132, 40);
-                            --bs-btn-active-bg: rgb(255, 118, 40) 
+                            --bs-btn-active-bg: rgb(255, 118, 40);
                         }
                     </style>
                     <div class="table-container">
