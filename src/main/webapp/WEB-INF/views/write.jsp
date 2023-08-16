@@ -182,10 +182,11 @@
 									searchField.addEventListener("keydown", (event) => {
 										if (event.keyCode === 13) {
 											const query = event.target.value;
-											fetch("/search/diner.do", {method: "GET"}).then((response) => {
+											fetch("/search/diner.do?q=" + query, {method: "GET"}).then((response) => {
 												return response.json();
 											}).then((json) => {
-												// json 데이터 핸들링
+												// TODO: json 데이터 핸들링
+												console.log(json);
 											})
 										}
 									});
