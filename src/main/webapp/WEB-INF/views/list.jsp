@@ -400,32 +400,52 @@
                 <div class="col-rt">
                     <!-- 게시판 테이블 -->
                     <style>
-                        .table-bhs {
-                            --bs-table-striped-bg: rgba(250, 50, 0, 0.15);
+                        .table-container {
                             margin: 50px;
                             width: 70%;
                         }
+                        .table-bhs {
+                            --bs-table-striped-bg: rgba(250, 50, 0, 0.15);
+                        }
+                        .table-header-button {
+                            display: flex;
+                            justify-content: end;
+                        }
+                        .btn-light {
+                            --bs-btn-bg: rgb(255, 104, 40);
+                            --bs-btn-border-color: rgba(0, 0, 0, 0);
+                            color: white;
+                            --bs-btn-hover-color: white;
+                            --bs-btn-active-color: white;
+                            --bs-btn-hover-bg: rgb(255, 132, 40);
+                            --bs-btn-active-bg: rgb(255, 118, 40) 
+                        }
                     </style>
-                    <table class="table table-bhs table-striped">
-                        <thead>
-                          <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">작성자</th>
-                            <th scope="col">제목</th>
-                            <th scope="col">작성일</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                            <c:forEach items="${list}" var="board">
+                    <div class="table-container">
+                        <div class="table-header-button">
+                            <button class="btn btn-light" onclick="location.href='write.do'"><strong>글쓰기</strong></button>
+                        </div>
+                        <table class="table table-bhs table-striped">
+                            <thead>
                                 <tr>
-                                    <th scope="row">${board.seq}</th>
-                                    <td>${board.writer.nickname}</td>
-                                    <td>${board.title}</td>
-                                    <td>${board.rdate}</td>
-                                  </tr>
-                            </c:forEach>
-                        </tbody>
-                      </table>
+                                    <th scope="col">#</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">제목</th>
+                                    <th scope="col">작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="${list}" var="board">
+                                    <tr>
+                                        <th scope="row">${board.seq}</th>
+                                        <td>${board.writer.nickname}</td>
+                                        <td>${board.title}</td>
+                                        <td>${board.rdate}</td>
+                                    </tr>
+                                </c:forEach>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </body>
