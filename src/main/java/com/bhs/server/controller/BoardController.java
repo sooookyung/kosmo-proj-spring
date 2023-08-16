@@ -16,4 +16,9 @@ public class BoardController {
     public String write() {
         return "write";
     }
+
+    @GetMapping("list.do")
+    public String list() {
+        return "list";
+    }
 }
