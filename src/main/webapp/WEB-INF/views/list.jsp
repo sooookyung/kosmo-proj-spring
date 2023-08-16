@@ -182,7 +182,6 @@
                     <span>당신의 도전이 새로운 미래를 만듭니다.</span>
                 </div>
                 <div class="col-lt">
-                    <span> 15 개의 모집공고가 있습니다.</span>
                     <!DOCTYPE html>
                     <html lang="ko">
 
@@ -190,9 +189,10 @@
                         <meta charset="UTF-8">
                         <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <title>Tropical Night Litchi-Root</title>
+                        <link rel="stylesheet" href="/css/bootstrap.css">
                         <link rel="stylesheet" type="text/css" href="/css/search.css">
-                        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-                        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+                        <script src="/js/bootstrap.js"></script>
                         <script>
                             function onchange_fun(no) {
                                 var companyId = document.getElementById("company");
@@ -398,348 +398,34 @@
                     </script>
                 </div>
                 <div class="col-rt">
-                    <ul class="accordion" id="accordionExample">
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="headingone"></h2>
-                            <div id="collapseone" class="accordion-collapse collapse show" aria-labelledby="headingone"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body"></div>
-                            </div>
-                        </li>
-
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading4">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                    <strong class="code-head-strong">IDLE</strong>
-                                    <div class="code-head-div">프론트엔드</div>
-                                    <span class="code-head-span">D--157</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 2년 이상</strong><br><br>
-                                    <code>관련학과 전공 또는 수료자, 프로젝트 경험 또는 포트폴리오 다수 보유자, PPT가능자</code><br><br>
-                                    2023. 02. 22 ~ 2023. 03. 10<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('IDLE', '2', '4')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading1">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                                    <strong class="code-head-strong">Bang SOFT</strong>
-                                    <div class="code-head-div">SI</div>
-                                    <span class="code-head-span">D--147</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 5년 이상(팀장급)</strong><br><br>
-                                    <code>관련 프로젝트 다수 경험자, 영어가능자, 팀장급 의사소통 가능한 분</code><br><br>
-                                    2023. 02. 13 ~ 2023. 03. 20<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Bang SOFT', '1', '1')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading9">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                                    <strong class="code-head-strong">Tuna Salad</strong>
-                                    <div class="code-head-div">백엔드 개발</div>
-                                    <span class="code-head-span">D--147</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 5년 이상(팀장급)</strong><br><br>
-                                    <code>개발 및 팀 운영 경력 보유한 분, JAVA/Python 언어 능통한 분</code><br><br>
-                                    2023. 02. 22 ~ 2023. 03. 20<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Tuna Salad', '3', '9')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading10">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
-                                    <strong class="code-head-strong">Fantastic 4</strong>
-                                    <div class="code-head-div">프론트엔드 개발</div>
-                                    <span class="code-head-span">D--147</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>신입/경력</strong><br><br>
-                                    <code>관련학과 전공/수료자, MBTI &quot;E&quot;성향이신 분</code><br><br>
-                                    2023. 02. 22 ~ 2023. 03. 20<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Fantastic 4', '4', '10')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading3">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                                    <strong class="code-head-strong">Bang SOFT</strong>
-                                    <div class="code-head-div">백엔드 개발</div>
-                                    <span class="code-head-span">D--140</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>신입/경력</strong><br><br>
-                                    <code>관련학과 전공/수료자, 프로젝트 유경험자, 한글/워드 등 문서작업 가능한 분</code><br><br>
-                                    2023. 03. 02 ~ 2023. 03. 27<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Bang SOFT', '1', '3')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading5">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                    <strong class="code-head-strong">IDLE</strong>
-                                    <div class="code-head-div">퍼블리셔</div>
-                                    <span class="code-head-span">D--140</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 5년 이상(팀장급)</strong><br><br>
-                                    <code>경력 필수사항, 발표 및 토의에 능한 분, 해외출장에 결격사유가 없는 분</code><br><br>
-                                    2023. 02. 01 ~ 2023. 03. 27<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('IDLE', '2', '5')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading12">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
-                                    <strong class="code-head-strong">Fantastic 4</strong>
-                                    <div class="code-head-div">백엔드 개발</div>
-                                    <span class="code-head-span">D--140</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 5년 이상</strong><br><br>
-                                    <code>JAVA/Python 가능한 분, 관련 프로젝트 경험 다수 보유한 분</code><br><br>
-                                    2023. 02. 27 ~ 2023. 03. 27<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Fantastic 4', '4', '12')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading2">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                                    <strong class="code-head-strong">Bang SOFT</strong>
-                                    <div class="code-head-div">SM</div>
-                                    <span class="code-head-span">D--136</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>신입/경력</strong><br><br>
-                                    <code>관련학과 전공/수료자, 영어가능자, 한글/워드 등 문서작업 가능한 분</code><br><br>
-                                    2023. 03. 02 ~ 2023. 03. 31<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Bang SOFT', '1', '2')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading7">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                    <strong class="code-head-strong">Tuna Salad</strong>
-                                    <div class="code-head-div">SI, SM</div>
-                                    <span class="code-head-span">D--133</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 2년 이상</strong><br><br>
-                                    <code>관련 학과 전공/수료자, 문서작업에 능통한 분, 발표에 능한 분, 팀원과 의사소통이 원활한 분</code><br><br>
-                                    2023. 03. 02 ~ 2023. 04. 03<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Tuna Salad', '3', '7')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading8">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                                    <strong class="code-head-strong">Tuna Salad</strong>
-                                    <div class="code-head-div">프론트엔드 개발</div>
-                                    <span class="code-head-span">D--133</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>신입/경력</strong><br><br>
-                                    <code>관련 학과 전공/수료자, 팀원과 의사소통이 원활한 분, MBTI 성향 &quot;E&quot; 이신분</code><br><br>
-                                    2023. 03. 02 ~ 2023. 04. 03<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Tuna Salad', '3', '8')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading11">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
-                                    <strong class="code-head-strong">Fantastic 4</strong>
-                                    <div class="code-head-div">백엔드 개발</div>
-                                    <span class="code-head-span">D--133</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>신입/경력</strong><br><br>
-                                    <code>JAVA/Python/Kotlin/Django/SQL/JAVAscript/Spring</code><br><br>
-                                    2023. 03. 02 ~ 2023. 04. 03<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('Fantastic 4', '4', '11')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading6">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                    <strong class="code-head-strong">IDLE</strong>
-                                    <div class="code-head-div">SI</div>
-                                    <span class="code-head-span">D--108</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 7년 이상(팀장급)</strong><br><br>
-                                    <code>JAVA/Python/Django 프로젝트 다수 경험자, 팀원들과 원활한 소통이 가능한 분, 해외출장에 결격사유가 없는 분</code><br><br>
-                                    2023. 03. 02 ~ 2023. 04. 28<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('IDLE', '2', '6')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading13">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
-                                    <strong class="code-head-strong">TN World Legend Bomi</strong>
-                                    <div class="code-head-div">퍼블리셔, UI/UX디자인</div>
-                                    <span class="code-head-span">D--75</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 15년 이상(PM급)</strong><br><br>
-                                    <code>개발 경험 다수 보유한 분, 팀원과 원활한 소통이 가능한 분, 해당분야 교육이 가능한 분</code><br><br>
-                                    2023. 02. 22 ~ 2023. 05. 31<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('TN World Legend Bomi', '5', '13')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading14">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
-                                    <strong class="code-head-strong">TN World Legend Bomi</strong>
-                                    <div class="code-head-div">백엔드 개발</div>
-                                    <span class="code-head-span">D--75</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 10년 이상(팀장급)</strong><br><br>
-                                    <code>Python/Java/JavaScript/C++/PHP/TypeScript/C/Go/Shell/Ruby/C#/Assembly language/SQL/Visual Basic/Delphi/Object Pascal/MATLAB/Fortran/Swift 중 최소 7개 이상 가능한 분</code><br><br>
-                                    2023. 02. 22 ~ 2023. 05. 31<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('TN World Legend Bomi', '5', '14')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="accordion-item">
-                            <h2 class="accordion-item accordion-header" id="heading15">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
-                                    <strong class="code-head-strong">TN World Legend Bomi</strong>
-                                    <div class="code-head-div">DB관리자</div>
-                                    <span class="code-head-span">D--14</span>
-                                    <div class="arrow"></div>
-                                </button>
-                            </h2>
-                            <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
-                                data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <strong>경력 20년 이상</strong><br><br>
-                                    <code>DB관리 경험 다수 보유자, Select문 1000줄 이상 가능한 분</code><br><br>
-                                    2023. 02. 22 ~ 2023. 07. 31<br><br>
-                                    <button style="display:block-inline"
-                                        onclick="check_apply('TN World Legend Bomi', '5', '15')">지원하기</button><br><br>
-                                </div>
-                            </div>
-                        </li>
-
-
-                    </ul>
+                    <!-- 게시판 테이블 -->
+                    <style>
+                        .table-bhs {
+                            --bs-table-striped-bg: rgba(250, 50, 0, 0.15);
+                            margin: 50px;
+                            width: 70%;
+                        }
+                    </style>
+                    <table class="table table-bhs table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성일</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${list}" var="board">
+                                <tr>
+                                    <th scope="row">${board.seq}</th>
+                                    <td>${board.writer}</td>
+                                    <td>${board.title}</td>
+                                    <td>${board.rdate}</td>
+                                  </tr>
+                            </c:forEach>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </body>
