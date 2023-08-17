@@ -29,7 +29,7 @@
 					} else {
 						f.submit();
 					}
-					
+
 				}
 			</script>
 		</head>
@@ -178,12 +178,12 @@
 										const dinerInput = document.querySelector("input[name=diner_name]");
 										dinerInput.value = name;
 									})
-									
+
 									const searchField = document.querySelector("#search-diner");
 									searchField.addEventListener("keydown", (event) => {
 										if (event.keyCode === 13) {
 											const query = event.target.value; // 검색어
-											fetch("/search/diner.do?q=" + query, {method: "GET"}).then((response) => {
+											fetch("/search/diner.do?q=" + query, { method: "GET" }).then((response) => {
 												return response.json();
 											}).then((json) => {
 												const tbody = document.querySelector("#search-result");
@@ -218,17 +218,17 @@
 										}
 									});
 									// 					<tr>
-										// 					<th scope="row"><input class="form-check-input" type="radio" name="dinerRadio" id="dinerRadio0"></th>
-														// 	<td>인도</td>
-														// 	<td>카레</td>
-														// 	<td>성북구</td>
-														// </tr>
+									// 					<th scope="row"><input class="form-check-input" type="radio" name="dinerRadio" id="dinerRadio0"></th>
+									// 	<td>인도</td>
+									// 	<td>카레</td>
+									// 	<td>성북구</td>
+									// </tr>
 								})
 								loginButton.addEventListener("click", togglegodal);
 								closeButton.addEventListener("click", togglegodal);
 								cancelButton.addEventListener("click", togglegodal);
-								window.addEventListener("click", windowOnClick); 
-								
+								window.addEventListener("click", windowOnClick);
+
 							</script>
 						</ul>
 					</div>
@@ -260,7 +260,7 @@
 
 
 				<div class="select-wrapper-content">
-					<form name="f" action="ask_ok" method="post" enctype="multipart/form-data">
+					<form name="f" action="write.do" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="csrfmiddlewaretoken"
 							value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
 						<input type="text" name="title" class="input-title" placeholder="제목입력" required></br></br>
@@ -338,24 +338,25 @@
 									<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
 										aria-labelledby="create-tab" tabindex="0">
 										<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
-										aria-labelledby="create-tab" tabindex="0">
-										<div class="mb-3">
-											<label for="input-diner-name" class="form-label">맛집 이름</label>
-											<input type="text" class="form-control" id="input-diner-name">
+											aria-labelledby="create-tab" tabindex="0">
+											<div class="mb-3">
+												<label for="input-diner-name" class="form-label">맛집 이름</label>
+												<input type="text" class="form-control" id="input-diner-name">
+											</div>
+											<div class="mb-3">
+												<label for="input-diner-location" class="form-label">위치</label>
+												<input type="text" class="form-control" id="input-diner-location"
+													readonly>
+											</div>
 										</div>
-										<div class="mb-3">
-											<label for="input-diner-location" class="form-label">위치</label>
-											<input type="text" class="form-control" id="input-diner-location"
-												readonly>
-										</div>
-									</div>
 									</div>
 								</div>
 
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-								<button type="button" class="btn btn-primary" id="modal-confirm-button" data-bs-dismiss="modal" disabled>확인</button>
+								<button type="button" class="btn btn-primary" id="modal-confirm-button"
+									data-bs-dismiss="modal" disabled>확인</button>
 							</div>
 						</div>
 					</div>
