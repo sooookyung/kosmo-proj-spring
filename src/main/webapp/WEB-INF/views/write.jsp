@@ -316,7 +316,7 @@
 												<table class="table table-diner-search">
 													<thead>
 														<tr>
-															<th scopt="col"></th>
+															<th scope="col"></th>
 															<th scope="col">카테고리</th>
 															<th scope="col">이름</th>
 															<th scope="col">위치</th>
