@@ -147,7 +147,7 @@
       </header>
       <ul class="nav-menu">
         <li class="nav-menu-item">
-          <a href="/introduce/" class="menu-heading">ABOUT BHS</a>
+          <a href="/introduce.do" class="menu-heading">ABOUT BHS</a>
         </li>
         <li class="nav-menu-item">
           <a href="/board/list.do" class="menu-heading">게시판</a>
