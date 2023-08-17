@@ -257,6 +257,7 @@
 
 				<div class="select-wrapper-content">
 					<form name="f" action="ask_ok" method="post" enctype="multipart/form-data">
+						<input type="hidden" name="nickname" value="${nickname}">
 						<input type="hidden" name="csrfmiddlewaretoken"
 							value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
 						<input type="text" name="title" class="input-title" placeholder="제목입력"></br></br>
