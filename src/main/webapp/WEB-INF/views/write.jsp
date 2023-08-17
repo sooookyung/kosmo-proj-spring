@@ -185,11 +185,32 @@
 											fetch("/search/diner.do?q=" + query, {method: "GET"}).then((response) => {
 												return response.json();
 											}).then((json) => {
-												// TODO: json 데이터 핸들링
-												console.log(json);
+												const tbody = document.querySelector("#search-result");
+												tbody.innerHTML = "";
+												for (diner of json) {
+													console.log(diner);
+													const tr = document.createElement("tr");
+													const th = document.createElement("th");
+													const td1 = document.createElement("td");
+													const td2 = document.createElement("td");
+													th.scope = "row";
+													th.innerText = diner.category;
+													tr.appendChild(th);
+													td1.innerText = diner.name;
+													tr.appendChild(td1);
+													td2.innerText = diner.location;
+													tr.appendChild(td2);
+
+													tbody.appendChild(tr);
+												}
 											})
 										}
 									});
+									// 					<tr>
+														// 	<th scope="row">인도</th>
+														// 	<td>카레</td>
+														// 	<td>성북구</td>
+														// </tr>
 								})
 								loginButton.addEventListener("click", togglegodal);
 								closeButton.addEventListener("click", togglegodal);
@@ -286,30 +307,13 @@
 												<table class="table table-diner-search">
 													<thead>
 														<tr>
-															<th scope="col">#</th>
-															<th scope="col">First</th>
-															<th scope="col">Last</th>
-															<th scope="col">Handle</th>
+															<th scope="col">카테고리</th>
+															<th scope="col">이름</th>
+															<th scope="col">위치</th>
 														</tr>
 													</thead>
-													<tbody>
-														<tr>
-															<th scope="row">1</th>
-															<td>Mark</td>
-															<td>Otto</td>
-															<td>@mdo</td>
-														</tr>
-														<tr>
-															<th scope="row">2</th>
-															<td>Jacob</td>
-															<td>Thornton</td>
-															<td>@fat</td>
-														</tr>
-														<tr>
-															<th scope="row">3</th>
-															<td colspan="2">Larry the Bird</td>
-															<td>@twitter</td>
-														</tr>
+													<tbody id="search-result">
+
 													</tbody>
 												</table>
 											</div>

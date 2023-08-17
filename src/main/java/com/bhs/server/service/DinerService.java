@@ -16,6 +16,6 @@ public class DinerService {
 
     public List<Diner> list(String query) {
         // return repository.findByNameOrLocation(query);
-        return repository.findByNameContainingOrLocationContaining(query, query); // 검증완료!
+        return repository.findByNameContaining(query); // 검증완료!
     }
 }

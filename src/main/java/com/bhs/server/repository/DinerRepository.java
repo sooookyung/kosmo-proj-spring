@@ -10,4 +10,5 @@ import com.bhs.server.domain.Member;
 
 public interface DinerRepository extends JpaRepository<Diner, Integer> {
     List<Diner> findByNameContainingOrLocationContaining(String name, String location);
+    List<Diner> findByNameContaining(String name);
 }
