@@ -35,8 +35,8 @@
                 <div class="nav-sign">
                     <ul class="nav-sign nav-sign-list">
 
-                        <button onclick="location.href='/logout'">LOGOUT</button>
-                        <button onclick="location.href='/info/'">INFO</button>
+                        <button id="login_button">LOGIN</button>
+                        <button onclick="location.href='/join.do'">SIGN UP</button>
 
 
                         <html lang="ko">
