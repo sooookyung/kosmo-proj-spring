@@ -14,4 +14,13 @@ public class MemberService {
     public void add(Member member) {
         repository.save(member);
     }
+
+    public Member checkPassword(String email, String pwd) {
+        Member member = repository.findByEmail(email);
+        if (member == null || !member.getPwd().equals(pwd)) {
+            return null;
+        } else {
+            return member;
+        }
+    }
 }
