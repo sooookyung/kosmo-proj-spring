@@ -10,7 +10,7 @@
       <title>Tropical Night Litchi-Root</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap" rel="stylesheet"> 
+      <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap" rel="stylesheet">
       <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Noto+Sans:wght@400;700&display=swap"
         rel="stylesheet">
@@ -265,17 +265,17 @@
 
             <div style="text-align : center;">
               <img src="/css/imgs/bhs_introduce3.png">
-              <span style="margin-top:20px;font-size:100px;">솔반</span>
+              <span style="vertical-align:middle;font-size:100px;">솔반</span>
             </div>
 
             <div style="text-align : center;">
               <img src="/css/imgs/bhs_introduce2.png">
-              <span style="margin-top:20px;font-size:100px;">상록</span>
+              <span style="vertical-align:middle;font-size:100px;">상록</span>
             </div>
 
             <div style="text-align : center;">
               <img src="/css/imgs/bhs_introduce.png">
-              <span style="margin-top:20px;font-size:100px;">수경</span>
+              <span style="vertical-align:middle;font-size:100px;">수경</span>
             </div>
 
           </div>
