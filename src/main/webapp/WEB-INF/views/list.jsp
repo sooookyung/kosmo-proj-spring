@@ -160,7 +160,7 @@
                     <a href="/introduce/" class="menu-heading">ABOUT BHS</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="/list/" class="menu-heading">게시판</a>
+                    <a href="/board/list.do" class="menu-heading">게시판</a>
                 </li>
                 <li class="nav-menu-item">
                     <a href="/apply/0/0" class="menu-heading">지도</a>

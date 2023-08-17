@@ -147,13 +147,13 @@
       </header>
       <ul class="nav-menu">
         <li class="nav-menu-item">
-          <a href="/introduce/" class="menu-heading">LITCHI ROOT</a>
+          <a href="/introduce/" class="menu-heading">ABOUT BHS</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/list/" class="menu-heading">모집공고</a>
+          <a href="/board/list.do" class="menu-heading">게시판</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/apply/0/0" class="menu-heading">입사지원</a>
+          <a href="/apply/0/0" class="menu-heading">지도</a>
         </li>
         <li class="nav-menu-item">
           <a href="/myPage/" class="menu-heading">지원목록</a>
