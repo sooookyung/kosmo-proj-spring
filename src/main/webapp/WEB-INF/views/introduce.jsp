@@ -17,6 +17,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="/css/index.css" />
+      <link rel="stylesheet" href="/css/bootstrap.css">
+      <script src="/js/bootstrap.js"></script>
     </head>
 
     <link rel="stylesheet" type="text/css" href="/css/nav.css" />
@@ -264,18 +266,20 @@
             </p>
 
             <div style="text-align : center;">
-              <img src="/css/imgs/bhs_introduce3.png">
-              <span style="vertical-align:middle;font-size:100px;">솔반</span>
+              <button class="btn" id="login_button"><img src="/css/imgs/bhs_introduce3.png"></button>
+              <span style="vertical-align:middle;font-size:100px;">B</span>
+            </div>
+
+
+
+            <div style="text-align : center;">
+              <button class="btn" id="login_button"><img src="/css/imgs/bhs_introduce2.png"></button>
+              <span style="vertical-align:middle;font-size:100px;">S</span>
             </div>
 
             <div style="text-align : center;">
-              <img src="/css/imgs/bhs_introduce2.png">
-              <span style="vertical-align:middle;font-size:100px;">상록</span>
-            </div>
-
-            <div style="text-align : center;">
-              <img src="/css/imgs/bhs_introduce.png">
-              <span style="vertical-align:middle;font-size:100px;">수경</span>
+              <button class="btn" id="login_button"><img src="/css/imgs/bhs_introduce.png"></button>
+              <span style="vertical-align:middle;font-size:100px;">H</span>
             </div>
 
           </div>
