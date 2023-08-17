@@ -187,19 +187,27 @@
 											}).then((json) => {
 												const tbody = document.querySelector("#search-result");
 												tbody.innerHTML = "";
-												for (diner of json) {
+												for ([index, diner] of json.entries()) {
 													console.log(diner);
 													const tr = document.createElement("tr");
 													const th = document.createElement("th");
 													const td1 = document.createElement("td");
 													const td2 = document.createElement("td");
+													const td3 = document.createElement("td");
 													th.scope = "row";
-													th.innerText = diner.category;
+													const radio = document.createElement("input");
+													radio.type = "radio";
+													radio.classList.add("form-check-input");
+													radio.name = "dinerRadio";
+													radio.id = "dinerRadio" + index;
+													th.appendChild(radio);
 													tr.appendChild(th);
-													td1.innerText = diner.name;
+													td1.innerText = diner.category;
 													tr.appendChild(td1);
-													td2.innerText = diner.location;
+													td2.innerText = diner.name;
 													tr.appendChild(td2);
+													td3.innerText = diner.location;
+													tr.appendChild(td3);
 
 													tbody.appendChild(tr);
 												}
@@ -207,7 +215,8 @@
 										}
 									});
 									// 					<tr>
-														// 	<th scope="row">인도</th>
+										// 					<th scope="row"><input class="form-check-input" type="radio" name="dinerRadio" id="dinerRadio0"></th>
+														// 	<td>인도</th>
 														// 	<td>카레</td>
 														// 	<td>성북구</td>
 														// </tr>
@@ -307,6 +316,7 @@
 												<table class="table table-diner-search">
 													<thead>
 														<tr>
+															<th scopt="col"></th>
 															<th scope="col">카테고리</th>
 															<th scope="col">이름</th>
 															<th scope="col">위치</th>
