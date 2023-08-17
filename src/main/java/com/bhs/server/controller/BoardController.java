@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bhs.server.domain.Board;
 import com.bhs.server.service.BoardService;
 
 @Controller
@@ -27,8 +26,4 @@ public class BoardController {
         return "write";
     }
 
-    @PostMapping("/write.do")
-    public String dowrite(Board board) {
-        return "redirect:list.do";
-    }
 }

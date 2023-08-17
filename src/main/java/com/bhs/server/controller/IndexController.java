@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class IndexController {
-    @GetMapping({"", "/"})
+    @GetMapping({ "", "/" })
     public String index() {
         return "redirect:index.do";
     }
@@ -14,5 +14,10 @@ public class IndexController {
     @GetMapping("index.do")
     public String indexDo() {
         return "index";
+    }
+
+    @GetMapping("/introduce.do")
+    public String introduce() {
+        return "introduce";
     }
 }

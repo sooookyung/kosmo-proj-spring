@@ -249,95 +249,17 @@
             }
           }
         </style>
-        <div class="slideshow-container">
-          <div class="index-title">
-            <p>
-              TROPICAL
-              <span>NIGHT.</span>
-              LITCHI
-              <span>ROOT.</span>
-            </p>
 
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img3.jpg" style="width:100%">
-            </div>
 
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img2.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img4.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img5.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img6.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img7.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img8.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img9.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img10.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img11.jpg" style="width:100%">
-            </div>
-            <br>
-          </div>
-        </div>
-        <div style="text-align:center">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
-        <script>
-          let slideIndex = 0;
-          showSlides();
-
-          function showSlides() {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) { slideIndex = 1 }
-            for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000); // Change image every 2 seconds
-          }
-        </script>
+        function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) { slides[i].style.display="none" ; } slideIndex++; if (slideIndex>
+          slides.length) { slideIndex = 1 }
+          for (i = 0; i < dots.length; i++) { dots[i].className=dots[i].className.replace(" active", "" ); }
+            slides[slideIndex - 1].style.display="block" ; dots[slideIndex - 1].className +=" active" ;
+            setTimeout(showSlides, 2000); // Change image every 2 seconds } </script>
       </main>
     </body>
 
