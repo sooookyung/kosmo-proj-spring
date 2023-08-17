@@ -25,8 +25,15 @@
         </h1>
         <div class="nav-sign">
           <ul class="nav-sign nav-sign-list">
-
-            <button id="login_button">LOGIN</button>
+            <c:choose>
+              <c:when test="${empty nickname}">
+                <button id="login_button">LOGIN</button>
+              </c:when>
+              <c:otherwise>
+                <button id="logout_button" onclick="location.href='/logout.do'">LOGOUT</button>
+              </c:otherwise>
+            </c:choose>
+            
             <button onclick="location.href='/join.do'">SIGN UP</button>
 
 
@@ -92,7 +99,7 @@
                     <img src="/css/imgs/main_logo.png" class="image-login">
                   </div>
                   <p></p>
-                  <form name="lf" action="/login_ok/" method="post">
+                  <form name="lf" action="/login.do" method="post">
                     <input type="hidden" name="csrfmiddlewaretoken"
                       value="RWqB2slcMopejijsEhpp9b0BvchuFb4WzNOsRhNlp4GizXD2SRLQghbwa6FQ4azq">
                     <label class="login-label" for="email">EMAIL</label>
