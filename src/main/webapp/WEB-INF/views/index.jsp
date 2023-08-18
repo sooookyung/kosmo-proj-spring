@@ -33,7 +33,7 @@
                 <button id="logout_button" onclick="location.href='/logout.do'">LOGOUT</button>
               </c:otherwise>
             </c:choose>
-            
+
             <button onclick="location.href='/join.do'">SIGN UP</button>
 
 
@@ -160,7 +160,7 @@
           <a href="/board/list.do" class="menu-heading">게시판</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/apply/0/0" class="menu-heading">지도</a>
+          <a href="/map.do" class="menu-heading">지도</a>
         </li>
         <li class="nav-menu-item">
           <a href="/myPage/" class="menu-heading">지원목록</a>
