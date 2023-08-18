@@ -260,25 +260,67 @@
         </style>
 
         <div class="introduce_bhs">
-          <div style="text-align : center;">
+          <div style="vertical-align: middle;">
             <p>
               INTRODUCE BHS
             </p>
 
             <div style="text-align : center;">
-              <button class="btn" id="login_button"><img src="/css/imgs/bhs_introduce3.png"></button>
+              <button class="btn" id="login_button" data-bs-toggle="modal" data-bs-target="#exampleModal"><img
+                  src="/css/imgs/bhs_introduce3.png"></button>
+              <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">배솔반</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      모두가 행복한 세상이 왔으면 좋겠습니다.
+                    </div>
+                  </div>
+                </div>
+              </div>
               <span style="vertical-align:middle;font-size:100px;">B</span>
             </div>
 
-
-
             <div style="text-align : center;">
-              <button class="btn" id="login_button"><img src="/css/imgs/bhs_introduce2.png"></button>
+              <button class="btn" id="login_button" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img
+                  src="/css/imgs/bhs_introduce2.png"></button>
+              <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel2">서상록</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      인생은 한방이다.
+                    </div>
+                  </div>
+                </div>
+              </div>
               <span style="vertical-align:middle;font-size:100px;">S</span>
             </div>
 
             <div style="text-align : center;">
-              <button class="btn" id="login_button"><img src="/css/imgs/bhs_introduce.png"></button>
+              <button class="btn" id="login_button" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img
+                  src="/css/imgs/bhs_introduce.png"></button>
+              <div class="modal" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel3">홍수경</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      NO PAIN NO GAIN.
+                    </div>
+                  </div>
+                </div>
+              </div>
               <span style="vertical-align:middle;font-size:100px;">H</span>
             </div>
 
