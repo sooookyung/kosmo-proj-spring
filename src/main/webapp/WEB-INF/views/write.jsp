@@ -17,33 +17,16 @@
 			</style>
 			<script>
 				function check() {
-					var companyVal = f.company.value;
-					if (companyVal.length == 0) {
-						alert("회사를 선택해 주세요.");
-						return false;
-					}
-					var recruitmentVal = f.recruitment.value;
-					if (recruitmentVal.length == 0) {
-						alert("직종을 선택해 주세요.");
-						return false;
-					}
-					var titleVal = f.title.value;
-					titleVal = trim(titleVal);
-					if (titleVal.length == 0) {
-						alert("제목을 입력해 주세요.");
-						f.title.value = "";
-						f.title.focus();
-						return false;
-					}
-					var contextVal = f.context.value;
-					contextVal = trim(contextVal);
-					if (contextVal.length == 0) {
-						alert("내용을 입력해 주세요.");
-						f.context.value = "";
-						f.context.focus();
-						return false;
-					}
-					if (confirm("문의하시겠습니까? 문의한 내용과 답변은 로그인한 이메일로 전송됩니다.")) {
+					if (f.title.value.trim() === "") {
+						alert("제목을 입력하세요");
+						return;
+					} else if (f.diner_name.value.trim() === "") {
+						alert("맛집을 선택하세요.")
+						return;
+					} else if (f.context.value.trim() === "") {
+						alert("내용을 입력하세요");
+						return;
+					} else {
 						f.submit();
 					}
 				}
@@ -177,6 +160,21 @@
 									}
 								});
 								$("document").ready(() => {
+									const confirmButton = document.querySelector("#modal-confirm-button");
+									const radioClickHandler = () => {
+										confirmButton.disabled = false;
+									}
+									confirmButton.addEventListener("click", () => {
+										const selectedRadio = document.querySelector("input[name=dinerRadio]:checked");
+										const selectedRow = selectedRadio.parentElement.parentElement;
+										const selectedRowChildren = selectedRow.children;
+										const category = selectedRowChildren[1].innerText;
+										const name = selectedRowChildren[2].innerText;
+										const location = selectedRowChildren[3].innerText;
+										// console.log("category: " + category + ", name: " + name + ", location: " + location);
+										const dinerInput = document.querySelector("input[name=diner_name]");
+										dinerInput.value = name;
+									})
 									const searchField = document.querySelector("#search-diner");
 									searchField.addEventListener("keydown", (event) => {
 										if (event.keyCode === 13) {
@@ -186,6 +184,7 @@
 											}).then((json) => {
 												const tbody = document.querySelector("#search-result");
 												tbody.innerHTML = "";
+												confirmButton.disabled = true;
 												for ([index, diner] of json.entries()) {
 													console.log(diner);
 													const tr = document.createElement("tr");
@@ -199,6 +198,7 @@
 													radio.classList.add("form-check-input");
 													radio.name = "dinerRadio";
 													radio.id = "dinerRadio" + index;
+													radio.addEventListener("click", radioClickHandler);
 													th.appendChild(radio);
 													tr.appendChild(th);
 													td1.innerText = diner.category;
@@ -215,7 +215,7 @@
 									});
 									// 					<tr>
 									// 					<th scope="row"><input class="form-check-input" type="radio" name="dinerRadio" id="dinerRadio0"></th>
-									// 	<td>인도</th>
+									// 	<td>인도</td>
 									// 	<td>카레</td>
 									// 	<td>성북구</td>
 									// </tr>
@@ -256,14 +256,15 @@
 
 
 				<div class="select-wrapper-content">
-					<form name="f" action="ask_ok" method="post" enctype="multipart/form-data">
+					<form name="f" action="write.do" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="nickname" value="${nickname}">
 						<input type="hidden" name="csrfmiddlewaretoken"
 							value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
-						<input type="text" name="title" class="input-title" placeholder="제목입력"></br></br>
-						<input type="text" name="diner_seq" class="input-title" placeholder="맛집입력"
-							data-bs-toggle="modal" data-bs-target="#exampleModal" readonly></br></br>
-
+							<input type="text" name="title" class="input-title" placeholder="제목입력" required></br></br>
+							<input type="hidden" name="diner_category">
+							<input type="hidden" name="diner_location">
+							<input type="text" name="diner_name" class="input-title" placeholder="맛집입력"
+								data-bs-toggle="modal" data-bs-target="#exampleModal" readonly required></br></br>
 						<textarea name="context" class="input-context"
 							placeholder="내용입력&#13;&#10;답변 및 처리 과정은 이메일로 확인 할 수 있습니다."></textarea></br></br>
 						<input type="button" class="select-wrapper-button" value="작성하기" onclick="check()" />
@@ -350,7 +351,8 @@
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
-								<button type="button" class="btn btn-primary" disabled>확인</button>
+								<button type="button" class="btn btn-primary" id="modal-confirm-button"
+									data-bs-dismiss="modal" disabled>확인</button>
 							</div>
 						</div>
 					</div>
