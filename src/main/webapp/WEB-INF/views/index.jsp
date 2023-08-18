@@ -258,11 +258,11 @@
         </style>
         <div class="slideshow-container">
           <div class="index-title">
-            <p>
-              TROPICAL
-              <span>NIGHT.</span>
-              LITCHI
-              <span>ROOT.</span>
+            <p style="position:relative; right:150px;">
+              <span>FOOD</span>
+              THAT<br>
+              TELLS
+              A <span>STORY</span>
             </p>
 
             <div class="mySlides fade">

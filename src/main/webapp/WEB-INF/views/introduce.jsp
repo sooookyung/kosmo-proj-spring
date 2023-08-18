@@ -16,6 +16,8 @@
         rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Barriecito&family=Luckiest+Guy&display=swap"
+        rel="stylesheet">
       <link rel="stylesheet" type="text/css" href="/css/index.css" />
       <link rel="stylesheet" href="/css/bootstrap.css">
       <script src="/js/bootstrap.js"></script>
@@ -257,11 +259,21 @@
           .introduce_bhs span {
             font-family: 'Jua', sans-serif;
           }
+
+          .introduce_bhs p {
+            color: white;
+            font-family: 'Barriecito', cursive;
+            font-family: 'Luckiest Guy', cursive;
+            font-size: 50px;
+            letter-spacing: 3px;
+
+          }
         </style>
 
         <div class="introduce_bhs">
           <div style="vertical-align: middle;">
-            <p>
+
+            <p style="position: relative; z-index: 1; text-align : center">
               INTRODUCE BHS
             </p>
 
@@ -275,6 +287,7 @@
                       <h1 class="modal-title fs-5" id="exampleModalLabel">배솔반</h1>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+
                     <div class="modal-body">
                       모두가 행복한 세상이 왔으면 좋겠습니다.
                     </div>

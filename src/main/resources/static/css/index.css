@@ -2,22 +2,27 @@
     font-family: noto-black;
     src: url(font/notosans/NotoSansKR-Black.otf);
 }
+
 @font-face {
     font-family: noto-bold;
     src: url(font/notosans/NotoSansKR-Bold.otf);
 }
+
 @font-face {
     font-family: noto-light;
     src: url(font/notosans/NotoSansKR-Light.otf);
 }
+
 @font-face {
     font-family: noto-medium;
     src: url(font/notosans/NotoSansKR-Medium.otf);
 }
+
 @font-face {
     font-family: noto-regular;
     src: url(font/notosans/NotoSansKR-Regular.otf);
 }
+
 @font-face {
     font-family: noto-thin;
     src: url(font/notosans/NotoSansKR-Thin.otf);
@@ -27,13 +32,13 @@
 .index-main {
     position: static;
     display: inline-block;
-    margin-top: 130px;
+    margin-top: 180px;
     width: 100%;
     height: 55rem;
     background-color: #F88b74;
 }
 
-.index-title{
+.index-title {
     display: flex;
     margin-top: 0px;
     width: auto;
@@ -48,18 +53,18 @@
     color: #fff;
 }
 
-.index-title p{
+.index-title p {
     display: inline-block;
     text-align: right;
-    margin-top: 12.2rem;
+    margin-top: 1rem;
     font-family: Arial black;
     cursor: default;
 }
 
-.index-title span{
+.index-title span {
     font-size: 4.5rem;
     color: #fff;
-    font-weight: 500;  
+    font-weight: 500;
     width: 210px;
     display: block;
     cursor: default;
@@ -67,25 +72,27 @@
 
 @keyframes opacityAni {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
 }
-.index-title span:first-child{
+
+.index-title span:first-child {
     color: #f54927;
 }
 
-.index-title span:last-child{
+.index-title span:last-child {
     color: #f54927;
 }
 
-.index-detail{
+.index-detail {
     display: block;
     font-size: 2rem;
     color: #fff;
-    font-weight: 500;  
+    font-weight: 500;
     width: auto;
     text-align: left;
     margin-left: 5rem;
@@ -93,12 +100,12 @@
     cursor: default;
 }
 
-.index-detail span:first-child{
+.index-detail span:first-child {
     letter-spacing: 3px;
     line-height: 22px;
 }
 
-.index-detail span:first-child::after{
+.index-detail span:first-child::after {
     content: "";
     display: block;
     background-color: #fff;
@@ -106,7 +113,7 @@
     margin: 10px 0;
 }
 
-.index-video{
+.index-video {
     display: block;
     width: 100%;
     height: 100%;
@@ -116,20 +123,22 @@
     margin-top: 12.2rem;
 }
 
-@media (max-width: 800px){
-    .index-video{
+@media (max-width: 800px) {
+    .index-video {
         display: none;
     }
+
     .index-detail {
         font-size: 1.5rem;
         margin-left: 3rem;
     }
 }
 
-@media (max-width: 500px){
-    .index-title{
+@media (max-width: 500px) {
+    .index-title {
         font-size: 3rem;
     }
+
     .index-detail {
         margin-left: 2rem;
     }
