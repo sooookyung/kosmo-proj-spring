@@ -184,7 +184,7 @@
 												category: category,
 												name: name,
 												location: location,
-											})).then((response) => {
+											}), {method: "POST"}).then((response) => {
 												if (response.ok) {
 													const dinerInput = document.querySelector("input[name=diner_name]");
 													dinerInput.value = name;
