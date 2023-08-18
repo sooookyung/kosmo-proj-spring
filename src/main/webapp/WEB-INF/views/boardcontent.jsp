@@ -187,7 +187,7 @@
             <div class="list-main">
                 <div class="list-title">
                     <c:forEach items="${list}" var="board">
-                        <p>${board.writer.nickname}님의 글이에요</p>
+                        <p>${board.writer.nickname}님<> 글이에요</p>
                     </c:forEach>
                     <span></span>
                 </div>
@@ -344,7 +344,7 @@
                         <c:forEach items="${list}" var="board">
                             <h2>${board.writer.nickname}님의 맛집 리뷰!</h2>
                         </c:forEach>
-                        <table class="board_detail">
+                        <table class="board_detail" style="">
                             <colgroup>
                                 <col width="15%" />
                                 <col width="35%" />
@@ -358,7 +358,7 @@
                                     <c:forEach items="${list}" var="board">
                                         <td>${board.seq}</td>
                                     </c:forEach>
-                                    <!-- <th scope="row">조회수</th>
+                                    <!-- <th scope="row">카테고리</th>
                                     <td text="${board.hitCnt}"></td> -->
                                 </tr>
                                 <tr>
