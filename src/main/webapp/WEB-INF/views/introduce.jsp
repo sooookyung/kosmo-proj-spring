@@ -270,7 +270,6 @@
           }
         </style>
 
-
         <div class="introduce_bhs">
           <div style="vertical-align: middle;">
 
