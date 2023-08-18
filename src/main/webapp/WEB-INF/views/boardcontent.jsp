@@ -9,6 +9,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Tropical Night Litchi-Root</title>
             <link rel="stylesheet" type="text/css" href="/css/list.css">
+            <link rel="stylesheet" href="/css/style.css" />
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
             <script src="/js/bootstrap.js"></script>
             <script src="/js/trim.js"></script>
@@ -51,6 +52,7 @@
                             <meta charset="UTF-8">
                             <title>Tropical Night Litchi-Root : login</title>
                             <link rel="stylesheet" type="text/css" href="/css/login_join.css">
+                            <link rel="stylesheet" th:href="@{/css/style.css}" />
                             <script src="/js/trim.js"></script>
                             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
                             <script>
@@ -184,7 +186,9 @@
         <body style="margin:0">
             <div class="list-main">
                 <div class="list-title">
-                    <p>게시판</p>
+                    <c:forEach items="${list}" var="board">
+                        <p>${board.writer.nickname}님의 글이에요</p>
+                    </c:forEach>
                     <span></span>
                 </div>
                 <div class="col-lt">
@@ -289,69 +293,6 @@
                         </script>
                     </head>
 
-                    <div class="jobs_search_box">
-                        <strong>관심 있는 맛집을<br>찾아보세요</strong>
-                        <div class="jobs_search_field">
-                            <form name="f" action="/list/" method="post">
-                                <input type="hidden" name="csrfmiddlewaretoken"
-                                    value="hYuKP8jAUKrwgQYkC41ayCRLbPEGcnfbZPSBEXLJxqIAwviUQEnBFI2GQJ22BmKF">
-                                <div class="field1">
-                                    <select class="field1-s" name="company" id="company" title="관계사 선택"
-                                        onchange="onchange_fun(1)">
-                                        <option class="field1-sel" value="primary" selected>카테고리</option>
-
-
-                                        <option class="field1-sel" value="1">한식</option>
-
-                                        <option class="field1-sel" value="2">양식</option>
-
-                                        <option class="field1-sel" value="3">중식</option>
-
-                                        <option class="field1-sel" value="4">일식</option>
-
-                                        <option class="field1-sel" value="5">디저트</option>
-
-
-                                    </select>
-                                </div>
-                                <div class="field2">
-                                    <select class="field2-s" name="sector" id="sector" title="관계사 선택"
-                                        onchange="onchange_fun(2)">
-                                        <option class="field2-sel" value="primary" selected>직무</option>
-
-
-                                        <option class="field2-sel" value="프론트엔드">프론트엔드</option>
-
-                                        <option class="field2-sel" value="DB관리자">DB관리자</option>
-
-                                        <option class="field2-sel" value="퍼블리셔">퍼블리셔</option>
-
-                                        <option class="field2-sel" value="SI, SM">SI, SM</option>
-
-                                        <option class="field2-sel" value="SM">SM</option>
-
-                                        <option class="field2-sel" value="퍼블리셔, UI/UX디자인">퍼블리셔, UI/UX디자인</option>
-
-                                        <option class="field2-sel" value="SI">SI</option>
-
-                                        <option class="field2-sel" value="백엔드 개발">백엔드 개발</option>
-
-                                        <option class="field2-sel" value="프론트엔드 개발">프론트엔드 개발</option>
-
-
-                                    </select>
-                                </div>
-                                <button class="search-btn" type="submit" id="search" title="검색하기">검색</button>
-                            </form>
-                        </div>
-                        <button class="reset-btn" onclick="onreset_fun()" title="검색조건 초기화">검색조건
-                            초기화<!--검색조건 초기화--></button>
-                    </div>
-
-
-
-
-
                     <script>
                         $(document).ready(function () {
                             stickyjobsSearch(); //sticky job search box
@@ -396,86 +337,79 @@
                         }
                     </script>
                 </div>
-                <div class="col-rt">
-                    <!-- 게시판 테이블 -->
-                    <style>
-                        .table-container {
-                            margin: 50px;
-                            width: 70%;
-                        }
+                <!-- 작성해야 하는곳 -->
 
-                        .table-bhs {
-                            --bs-table-striped-bg: rgba(250, 50, 0, 0.15);
-                        }
-
-                        .table-header-button {
-                            display: flex;
-                            justify-content: end;
-                        }
-
-                        .btn-light {
-                            --bs-btn-bg: rgb(255, 104, 40);
-                            --bs-btn-border-color: rgba(0, 0, 0, 0);
-                            color: white;
-                            --bs-btn-hover-color: white;
-                            --bs-btn-active-color: white;
-                            --bs-btn-hover-bg: rgb(255, 132, 40);
-                            --bs-btn-active-bg: rgb(255, 118, 40);
-                        }
-
-                        .button {
-                            border: 0;
-                            background-color: none;
-                        }
-                    </style>
-                    <div class="table-container">
-                        <div class="table-header-button">
-                            <button class="btn btn-light"
-                                onclick="location.href='write.do'"><strong>글쓰기</strong></button>
-                        </div>
-                        <table class="table table-bhs table-striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">작성자</th>
-                                    <th scope="col">제목</th>
-                                    <th scope="col">작성일</th>
-                                </tr>
-                            </thead>
+                <body>
+                    <div class="container">
+                        <c:forEach items="${list}" var="board">
+                            <h2>${board.writer.nickname}님의 맛집 리뷰!</h2>
+                        </c:forEach>
+                        <table class="board_detail">
+                            <colgroup>
+                                <col width="15%" />
+                                <col width="35%" />
+                                <col width="15%" />
+                                <col width="35%" />
+                            </colgroup>
+                            <caption>게시글 상세내용</caption>
                             <tbody>
-                                <c:forEach items="${list}" var="board">
-                                    <tr>
-                                        <th scope="row">${board.seq}</th>
+                                <tr>
+                                    <th scope="row">글 번호</th>
+                                    <c:forEach items="${list}" var="board">
+                                        <td>${board.seq}</td>
+                                    </c:forEach>
+                                    <!-- <th scope="row">조회수</th>
+                                    <td text="${board.hitCnt}"></td> -->
+                                </tr>
+                                <tr>
+                                    <th scope="row">작성자</th>
+                                    <c:forEach items="${list}" var="board">
                                         <td>${board.writer.nickname}</td>
-                                        <td><a href='boardcontent.do?seq=${board.seq}'>${board.title}</a>
-                                        </td>
+                                    </c:forEach>
+                                    <th scope="row">작성일</th>
+                                    <c:forEach items="${list}" var="board">
                                         <td>${board.rdate}</td>
-                                    </tr>
-                                </c:forEach>
+                                    </c:forEach>
+                                </tr>
+                                <tr>
+                                    <th scope="row">제목</th>
+                                    <td colspan="3">
+                                        <c:forEach items="${list}" var="board">
+                                            <input type="text" id="title" name="title" value="${board.title}" />
+                                        </c:forEach>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="view_text">
+                                        <c:forEach items="${list}" var="board">
+                                            <textarea title="내용" id="content" name="content"
+                                                readonly>${board.content}</textarea>
+                                        </c:forEach>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
-                </div>
-            </div>
+                </body>
+                <link rel="stylesheet" type="text/css" href="/css/footer.css" />
+
+                <footer class="footer-main">
+                    <ul class="footer-corp">
+                        <li><a href="#">홈페이지 이용약관 및 개인정보 처리방침</a></li>
+                    </ul>
+                    <ul class="footer-info">
+                        <li><a href="#">찾아오시는 길</a></li>
+                        <li><a href="#">계열사</a></li>
+                    </ul>
+                    <address class="footer-address">
+                        <span>사업자등록번호 : 123-45-67890</span>
+                        <span>(주)BHS COMPANY 대표 : 솔서ㄴ수범</span>
+                        <span>TEL : 1234-1234</span>
+                        <span>개인정보 책임자 : 배솔반</span>
+                    </address>
+                    <small class="footer-copyringt">&copy; BHS Company. All Rights Reserved.</small>
+                </footer>
         </body>
-
-        <link rel="stylesheet" type="text/css" href="/css/footer.css" />
-
-        <footer class="footer-main">
-            <ul class="footer-corp">
-                <li><a href="#">홈페이지 이용약관 및 개인정보 처리방침</a></li>
-            </ul>
-            <ul class="footer-info">
-                <li><a href="#">찾아오시는 길</a></li>
-                <li><a href="#">계열사</a></li>
-            </ul>
-            <address class="footer-address">
-                <span>사업자등록번호 : 123-45-67890</span>
-                <span>(주)BHS COMPANY 대표 : 솔서ㄴ수범</span>
-                <span>TEL : 1234-1234</span>
-                <span>개인정보 책임자 : 배솔반</span>
-            </address>
-            <small class="footer-copyringt">&copy; BHS Company. All Rights Reserved.</small>
-        </footer>
 
         </html>

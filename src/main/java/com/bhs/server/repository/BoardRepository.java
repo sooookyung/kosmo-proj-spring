@@ -8,4 +8,6 @@ import com.bhs.server.domain.Board;
 
 public interface BoardRepository extends JpaRepository<Board, Integer> {
     List<Board> findByParentIsNullOrderBySeqDesc();
+
+    List<Board> findBySeq(int seq);
 }
