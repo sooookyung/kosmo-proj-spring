@@ -34,8 +34,14 @@
                 </h1>
                 <div class="nav-sign">
                     <ul class="nav-sign nav-sign-list">
-
-                        <button id="login_button">LOGIN</button>
+                        <c:choose>
+                            <c:when test="${empty nickname}">
+                                <button id="login_button">LOGIN</button>
+                            </c:when>
+                            <c:otherwise>
+                                <button id="logout_button" onclick="location.href='/logout.do'">LOGOUT</button>
+                            </c:otherwise>
+                        </c:choose>
                         <button onclick="location.href='/join.do'">SIGN UP</button>
 
 
@@ -101,7 +107,7 @@
                                         <img src="/css/imgs/main_logo.png" class="image-login">
                                     </div>
                                     <p></p>
-                                    <form name="lf" action="/login_ok/" method="post">
+                                    <form name="lf" action="/login.do" method="post">
                                         <input type="hidden" name="csrfmiddlewaretoken"
                                             value="hYuKP8jAUKrwgQYkC41ayCRLbPEGcnfbZPSBEXLJxqIAwviUQEnBFI2GQJ22BmKF">
                                         <label class="login-label" for="email">EMAIL</label>
@@ -333,13 +339,6 @@
                                         <option class="field2-sel" value="프론트엔드 개발">프론트엔드 개발</option>
 
 
-                                    </select>
-                                </div>
-                                <div class="field3">
-                                    <select class="field3-s" name="career" id="career" title="영입유형 선택">
-                                        <option class="field3-sel selected" value="primary">영입유형</option>
-                                        <option value="신입">신입</option>
-                                        <option value="경력">경력</option>
                                     </select>
                                 </div>
                                 <button class="search-btn" type="submit" id="search" title="검색하기">검색</button>
