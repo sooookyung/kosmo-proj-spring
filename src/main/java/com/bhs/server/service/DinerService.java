@@ -18,4 +18,8 @@ public class DinerService {
         // return repository.findByNameOrLocation(query);
         return repository.findByNameContaining(query); // 검증완료!
     }
+
+    public Diner insert(Diner diner) {
+        return repository.save(diner);
+    }
 }
