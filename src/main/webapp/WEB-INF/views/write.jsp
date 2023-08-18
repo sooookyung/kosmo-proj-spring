@@ -166,15 +166,34 @@
 										confirmButton.disabled = false;
 									}
 									confirmButton.addEventListener("click", () => {
-										const selectedRadio = document.querySelector("input[name=dinerRadio]:checked");
-										const selectedRow = selectedRadio.parentElement.parentElement;
-										const selectedRowChildren = selectedRow.children;
-										const category = selectedRowChildren[1].innerText;
-										const name = selectedRowChildren[2].innerText;
-										const location = selectedRowChildren[3].innerText;
-										// console.log("category: " + category + ", name: " + name + ", location: " + location);
-										const dinerInput = document.querySelector("input[name=diner_name]");
-										dinerInput.value = name;
+										if (document.querySelector("#search-tab").classList.contains("active")) {
+											const selectedRadio = document.querySelector("input[name=dinerRadio]:checked");
+											const selectedRow = selectedRadio.parentElement.parentElement;
+											const selectedRowChildren = selectedRow.children;
+											const category = selectedRowChildren[1].innerText;
+											const name = selectedRowChildren[2].innerText;
+											const location = selectedRowChildren[3].innerText;
+											// console.log("category: " + category + ", name: " + name + ", location: " + location);
+											const dinerInput = document.querySelector("input[name=diner_name]");
+											dinerInput.value = name;
+										} else {
+											const category = document.querySelector("#input-diner-category").value;
+											const name = document.querySelector("#input-diner-name").value;
+											const location = document.querySelector("#input-diner-location").value;
+											fetch("/diner/insert.do?" + new URLSearchParams({
+												category: category,
+												name: name,
+												location: location,
+											})).then((response) => {
+												if (response.ok) {
+													const dinerInput = document.querySelector("input[name=diner_name]");
+													dinerInput.value = name;
+												} else {
+													console.error(response);
+												}
+												
+											})
+										}
 									})
 									const searchField = document.querySelector("#search-diner");
 									searchField.addEventListener("keydown", (event) => {
@@ -225,13 +244,26 @@
 									const handlePostcode = (data) => {
 										console.log(data);
 										locationField.value = data.address;
+										confirmButton.disabled = false;
 									}
 									locationField.addEventListener("click", (event) => {
 										new daum.Postcode({
 											oncomplete: handlePostcode,
 										}).open();
 									});
-								})
+
+									const setConfirmableBySearchTab = () => {
+										confirmButton.disabled = document.querySelector("input[name=dinerRadio]:checked") === null;
+									}
+
+									const setConfirmableByCreateTab = () => {
+										confirmButton.disabled = document.querySelector("#input-diner-location").value === "" || document.querySelector("#input-diner-name").value === "";
+									};
+
+									document.querySelector("#search-tab").addEventListener("shown.bs.tab", setConfirmableBySearchTab);
+									document.querySelector("#create-tab").addEventListener("shown.bs.tab", setConfirmableByCreateTab);
+									document.querySelector("#input-diner-name").addEventListener("keyup", setConfirmableByCreateTab);
+								});
 								loginButton.addEventListener("click", togglegodal);
 								closeButton.addEventListener("click", togglegodal);
 								cancelButton.addEventListener("click", togglegodal);
@@ -345,7 +377,19 @@
 
 									<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
 										aria-labelledby="create-tab" tabindex="0">
-										
+											<div class="mb-3">
+												<label for="input-diner-category" class="form-label">카테고리</label>
+												<select class="form-select" id="input-diner-category">
+													<option>한식</option>
+													<option>양식</option>
+													<option>일식</option>
+													<option>중식</option>
+													<option>분식</option>
+													<option>아시아</option>
+													<option>카페</option>
+													<option>기타</option>
+												</select>
+											</div>
 											<div class="mb-3">
 												<label for="input-diner-name" class="form-label">맛집 이름</label>
 												<input type="text" class="form-control" id="input-diner-name">
