@@ -80,7 +80,7 @@
     padding: 0 0 15px;
     top: 70%;
     left: 7%;
-    width: 380px;
+    width: 800px;
     color: #ffffff;
     font-size: 70px;
     font-family: noto-medium;
@@ -302,7 +302,7 @@
     .list-title p {
         font-size: 50px;
         top: 78%;
-        width: 300px;
+        width: 450px;
     }
 
     .list-title span {
@@ -364,7 +364,7 @@
     .list-title p {
         font-size: 40px;
         top: 60%;
-        width: 270px;
+        width: 400px;
     }
 
     .list-title span {
@@ -425,7 +425,7 @@
     .list-title p {
         font-size: 20px;
         top: 67%;
-        width: 200px;
+        width: 300px;
     }
 
     .code-head-strong {
