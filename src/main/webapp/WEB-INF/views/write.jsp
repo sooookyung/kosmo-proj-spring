@@ -8,7 +8,8 @@
 			<title>Tropical Night Litchi-Root</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link rel="stylesheet" type="text/css" href="/css/apply_ask_myPage.css" />
-			<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+			<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+			<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 			<script src="/js/trim.js"></script>
 			<!-- <script src=""></script> 로그인 js 넣기-->
 			<style>
@@ -219,6 +220,17 @@
 									// 	<td>카레</td>
 									// 	<td>성북구</td>
 									// </tr>
+
+									const locationField = document.querySelector("#input-diner-location");
+									const handlePostcode = (data) => {
+										console.log(data);
+										locationField.value = data.address;
+									}
+									locationField.addEventListener("click", (event) => {
+										new daum.Postcode({
+											oncomplete: handlePostcode,
+										}).open();
+									});
 								})
 								loginButton.addEventListener("click", togglegodal);
 								closeButton.addEventListener("click", togglegodal);
@@ -271,7 +283,7 @@
 						</from>
 				</div>
 				<style>
-					.btn-primary {
+					/* .btn-primary {
 						--bs-btn-bg: rgb(255, 104, 40);
 						--bs-btn-border-color: rgba(0, 0, 0, 0);
 						color: white;
@@ -279,7 +291,7 @@
 						--bs-btn-active-color: white;
 						--bs-btn-hover-bg: rgb(255, 132, 40);
 						--bs-btn-active-bg: rgb(255, 118, 40);
-					}
+					} */
 				</style>
 				<!-- Modal -->
 				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
@@ -333,18 +345,19 @@
 
 									<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
 										aria-labelledby="create-tab" tabindex="0">
-										<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
-											aria-labelledby="create-tab" tabindex="0">
+										
 											<div class="mb-3">
 												<label for="input-diner-name" class="form-label">맛집 이름</label>
 												<input type="text" class="form-control" id="input-diner-name">
 											</div>
 											<div class="mb-3">
 												<label for="input-diner-location" class="form-label">위치</label>
-												<input type="text" class="form-control" id="input-diner-location"
+												<input type="text" class="form-control" id="input-diner-location" placeholder="주소 검색"
 													readonly>
 											</div>
-										</div>
+											<div class="mb-3">
+												<input type="text" class="form-control" id="input-diner-location-detail" placeholder="상세주소">
+											</div>
 									</div>
 								</div>
 
