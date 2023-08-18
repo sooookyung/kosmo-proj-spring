@@ -8,9 +8,12 @@
 			<title>Tropical Night Litchi-Root</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link rel="stylesheet" type="text/css" href="/css/apply_ask_myPage.css" />
-			<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+			<link rel="stylesheet" href="/css/bootstrap.css">
 			<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 			<script src="/js/trim.js"></script>
+			<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+			<script src="/js/bootstrap.js"></script>
+			<script src="/js/util.js"></script>
 			<!-- <script src=""></script> 로그인 js 넣기-->
 			<style>
 
@@ -54,11 +57,10 @@
 							<head>
 								<meta charset="UTF-8">
 								<title>Tropical Night Litchi-Root : login</title>
-								<link rel="stylesheet" href="/css/bootstrap.css">
+								
 								<link rel="stylesheet" type="text/css" href="/css/login_join.css">
 								<script src="/js/trim.js"></script>
-								<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-								<script src="/js/bootstrap.js"></script>
+								
 								<script>
 									function check_login() {
 										var loginEmailFoc = document.getElementById('login-email');
@@ -187,11 +189,17 @@
 											}), {method: "POST"}).then((response) => {
 												if (response.ok) {
 													const dinerInput = document.querySelector("input[name=diner_name]");
+													showToast("맛집을 등록하였습니다.", "success");
 													dinerInput.value = name;
+
 												} else {
 													console.error(response);
+													showToast("맛집 등록에 실패하였습니다.", "danger");
 												}
 												
+											}).catch(() => {
+												console.error(response);
+												showToast("맛집 등록에 실패하였습니다.", "danger");
 											})
 										}
 									})

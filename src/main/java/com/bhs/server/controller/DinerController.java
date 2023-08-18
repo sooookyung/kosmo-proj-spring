@@ -1,6 +1,7 @@
 package com.bhs.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +20,8 @@ public class DinerController {
 
     @PostMapping("/insert.do")
     @ResponseBody
-    public void insert(Diner diner) {
+    public ResponseEntity<String> insert(Diner diner) {
         service.insert(diner);
+        return ResponseEntity.ok().build();
     }
 }
