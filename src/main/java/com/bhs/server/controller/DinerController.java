@@ -1,6 +1,7 @@
 package com.bhs.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +22,7 @@ public class DinerController {
     @PostMapping("/insert.do")
     @ResponseBody
     public ResponseEntity<String> insert(Diner diner) {
-        service.insert(diner);
-        return ResponseEntity.ok().build();
+        int seq = service.insert(diner).getSeq();
+        return ResponseEntity.ok().contentType(MediaType.TEXT_PLAIN).body(String.valueOf(seq));
     }
 }

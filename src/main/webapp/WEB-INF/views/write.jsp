@@ -168,6 +168,8 @@
 										confirmButton.disabled = false;
 									}
 									confirmButton.addEventListener("click", () => {
+										const dinerNameInput = document.querySelector("input[name=diner_name]");
+										const dinerSeqInput = document.querySelector("input[name=diner_seq]");
 										if (document.querySelector("#search-tab").classList.contains("active")) {
 											const selectedRadio = document.querySelector("input[name=dinerRadio]:checked");
 											const selectedRow = selectedRadio.parentElement.parentElement;
@@ -176,8 +178,8 @@
 											const name = selectedRowChildren[2].innerText;
 											const location = selectedRowChildren[3].innerText;
 											// console.log("category: " + category + ", name: " + name + ", location: " + location);
-											const dinerInput = document.querySelector("input[name=diner_name]");
-											dinerInput.value = name;
+											dinerSeqInput.value = selectedRowChildren[4].innerText;
+											dinerNameInput.value = name;
 										} else {
 											const category = document.querySelector("#input-diner-category").value;
 											const name = document.querySelector("#input-diner-name").value;
@@ -188,15 +190,16 @@
 												location: location,
 											}), { method: "POST" }).then((response) => {
 												if (response.ok) {
-													const dinerInput = document.querySelector("input[name=diner_name]");
 													showToast("맛집을 등록하였습니다.", "success");
-													dinerInput.value = name;
-
+													dinerNameInput.value = name;
+													return response.text();
 												} else {
 													console.error(response);
 													showToast("맛집 등록에 실패하였습니다.", "danger");
 												}
 
+											}).then((text) => {
+												dinerSeqInput.value = text;
 											}).catch(() => {
 												console.error(response);
 												showToast("맛집 등록에 실패하였습니다.", "danger");
@@ -220,6 +223,7 @@
 													const td1 = document.createElement("td");
 													const td2 = document.createElement("td");
 													const td3 = document.createElement("td");
+													const td4 = document.createElement("td");
 													th.scope = "row";
 													const radio = document.createElement("input");
 													radio.type = "radio";
@@ -235,6 +239,9 @@
 													tr.appendChild(td2);
 													td3.innerText = diner.location;
 													tr.appendChild(td3);
+													td4.innerText = diner.seq;
+													td4.style["display"] = "none";
+													tr.appendChild(td4);
 
 													tbody.appendChild(tr);
 												}
@@ -313,8 +320,7 @@
 						<input type="hidden" name="csrfmiddlewaretoken"
 							value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
 						<input type="text" name="title" class="input-title" placeholder="제목입력" required></br></br>
-						<input type="hidden" name="diner_category">
-						<input type="hidden" name="diner_location">
+						<input type="hidden" name="diner_seq">
 						<input type="text" name="diner_name" class="input-title" placeholder="맛집입력"
 							data-bs-toggle="modal" data-bs-target="#exampleModal" readonly required></br></br>
 						<textarea name="context" class="input-context"
