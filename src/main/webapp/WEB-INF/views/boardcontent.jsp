@@ -187,7 +187,7 @@
             <div class="list-main">
                 <div class="list-title">
                     <c:forEach items="${list}" var="board">
-                        <p>${board.writer.nickname}님<> 글이에요</p>
+                        <p>${board.writer.nickname}님 글이에요</p>
                     </c:forEach>
                     <span></span>
                 </div>
