@@ -2,6 +2,8 @@ package com.bhs.server.domain;
 
 import java.util.Date;
 
+import org.hibernate.annotations.CreationTimestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,6 +26,7 @@ public class Board {
 
     private String title;
     private String content;
+    @CreationTimestamp
     private Date rdate;
 
     @ManyToOne(optional = false)

@@ -27,7 +27,7 @@
 					} else if (f.diner_name.value.trim() === "") {
 						alert("맛집을 선택하세요.")
 						return;
-					} else if (f.context.value.trim() === "") {
+					} else if (f.content.value.trim() === "") {
 						alert("내용을 입력하세요");
 						return;
 					} else {
@@ -317,13 +317,14 @@
 				<div class="select-wrapper-content">
 					<form name="f" action="write.do" method="post" enctype="multipart/form-data">
 						<input type="hidden" name="nickname" value="${nickname}">
+						<input type="hidden" name="email" value="${email}">
 						<input type="hidden" name="csrfmiddlewaretoken"
 							value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
 						<input type="text" name="title" class="input-title" placeholder="제목입력" required></br></br>
 						<input type="hidden" name="diner_seq">
 						<input type="text" name="diner_name" class="input-title" placeholder="맛집입력"
 							data-bs-toggle="modal" data-bs-target="#exampleModal" readonly required></br></br>
-						<textarea name="context" class="input-context"
+						<textarea name="content" class="input-content"
 							placeholder="내용입력&#13;&#10;답변 및 처리 과정은 이메일로 확인 할 수 있습니다."></textarea></br></br>
 						<input type="button" class="select-wrapper-button" value="작성하기" onclick="check()" />
 						</from>

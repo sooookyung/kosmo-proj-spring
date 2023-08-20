@@ -23,6 +23,7 @@ public class MemberController {
             return "login_error";
         } else {
             session.setAttribute("nickname", result.getNickname());
+            session.setAttribute("email", result.getEmail());
             return "redirect:index.do";
         }
     }
