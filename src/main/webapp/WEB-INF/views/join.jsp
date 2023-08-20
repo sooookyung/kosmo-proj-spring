@@ -6,7 +6,7 @@
 
         <head>
             meta charset="UTF-8">
-            <title>Tropical Night Litchi-Root : sign-up</title>
+            <title>BHS.COM : sign-up</title>
             <link rel="stylesheet" type="text/css" href="/css/login_join.css">
             <script src="/js/trim.js"></script>
             <script languege="javascript">

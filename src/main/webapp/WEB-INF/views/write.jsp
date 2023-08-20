@@ -5,7 +5,7 @@
 
 		<head>
 			<meta charset="UTF-8">
-			<title>Tropical Night Litchi-Root</title>
+			<title>BHS.COM</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<link rel="stylesheet" type="text/css" href="/css/apply_ask_myPage.css" />
 			<link rel="stylesheet" href="/css/bootstrap.css">
@@ -57,10 +57,10 @@
 							<head>
 								<meta charset="UTF-8">
 								<title>Tropical Night Litchi-Root : login</title>
-								
+
 								<link rel="stylesheet" type="text/css" href="/css/login_join.css">
 								<script src="/js/trim.js"></script>
-								
+
 								<script>
 									function check_login() {
 										var loginEmailFoc = document.getElementById('login-email');
@@ -186,7 +186,7 @@
 												category: category,
 												name: name,
 												location: location,
-											}), {method: "POST"}).then((response) => {
+											}), { method: "POST" }).then((response) => {
 												if (response.ok) {
 													const dinerInput = document.querySelector("input[name=diner_name]");
 													showToast("맛집을 등록하였습니다.", "success");
@@ -196,7 +196,7 @@
 													console.error(response);
 													showToast("맛집 등록에 실패하였습니다.", "danger");
 												}
-												
+
 											}).catch(() => {
 												console.error(response);
 												showToast("맛집 등록에 실패하였습니다.", "danger");
@@ -312,11 +312,11 @@
 						<input type="hidden" name="nickname" value="${nickname}">
 						<input type="hidden" name="csrfmiddlewaretoken"
 							value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
-							<input type="text" name="title" class="input-title" placeholder="제목입력" required></br></br>
-							<input type="hidden" name="diner_category">
-							<input type="hidden" name="diner_location">
-							<input type="text" name="diner_name" class="input-title" placeholder="맛집입력"
-								data-bs-toggle="modal" data-bs-target="#exampleModal" readonly required></br></br>
+						<input type="text" name="title" class="input-title" placeholder="제목입력" required></br></br>
+						<input type="hidden" name="diner_category">
+						<input type="hidden" name="diner_location">
+						<input type="text" name="diner_name" class="input-title" placeholder="맛집입력"
+							data-bs-toggle="modal" data-bs-target="#exampleModal" readonly required></br></br>
 						<textarea name="context" class="input-context"
 							placeholder="내용입력&#13;&#10;답변 및 처리 과정은 이메일로 확인 할 수 있습니다."></textarea></br></br>
 						<input type="button" class="select-wrapper-button" value="작성하기" onclick="check()" />
@@ -385,31 +385,32 @@
 
 									<div class="tab-pane fade" id="create-tab-pane" role="tabpanel"
 										aria-labelledby="create-tab" tabindex="0">
-											<div class="mb-3">
-												<label for="input-diner-category" class="form-label">카테고리</label>
-												<select class="form-select" id="input-diner-category">
-													<option>한식</option>
-													<option>양식</option>
-													<option>일식</option>
-													<option>중식</option>
-													<option>분식</option>
-													<option>아시아</option>
-													<option>카페</option>
-													<option>기타</option>
-												</select>
-											</div>
-											<div class="mb-3">
-												<label for="input-diner-name" class="form-label">맛집 이름</label>
-												<input type="text" class="form-control" id="input-diner-name">
-											</div>
-											<div class="mb-3">
-												<label for="input-diner-location" class="form-label">위치</label>
-												<input type="text" class="form-control" id="input-diner-location" placeholder="주소 검색"
-													readonly>
-											</div>
-											<div class="mb-3">
-												<input type="text" class="form-control" id="input-diner-location-detail" placeholder="상세주소">
-											</div>
+										<div class="mb-3">
+											<label for="input-diner-category" class="form-label">카테고리</label>
+											<select class="form-select" id="input-diner-category">
+												<option>한식</option>
+												<option>양식</option>
+												<option>일식</option>
+												<option>중식</option>
+												<option>분식</option>
+												<option>아시아</option>
+												<option>카페</option>
+												<option>기타</option>
+											</select>
+										</div>
+										<div class="mb-3">
+											<label for="input-diner-name" class="form-label">맛집 이름</label>
+											<input type="text" class="form-control" id="input-diner-name">
+										</div>
+										<div class="mb-3">
+											<label for="input-diner-location" class="form-label">위치</label>
+											<input type="text" class="form-control" id="input-diner-location"
+												placeholder="주소 검색" readonly>
+										</div>
+										<div class="mb-3">
+											<input type="text" class="form-control" id="input-diner-location-detail"
+												placeholder="상세주소">
+										</div>
 									</div>
 								</div>
 
