@@ -266,7 +266,7 @@
             </p>
 
             <div class="mySlides fade">
-              <img src="css/imgs/bhs_main_img3.jpg" style="width:100%">
+              <img src="css/imgs/bhs_main_img3.png" style="width:100%">
             </div>
 
             <div class="mySlides fade">
