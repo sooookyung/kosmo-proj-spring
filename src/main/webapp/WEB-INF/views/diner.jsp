@@ -7,7 +7,7 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Document</title>
+            <title>맛집의 정보는?</title>
             <style>
                 @font-face {
                     font-family: 'Godo';
@@ -23,7 +23,7 @@
 
                 td {
                     padding: 8px;
-                    border: 1px solid rgb(238, 148, 148);
+                    border: 1px solid #f9e5e1;
                     font-family: 'Godo';
                 }
 
@@ -41,6 +41,7 @@
 
         <body>
             <table>
+                <h3>'${diner.name}'의 정보에요</h3>
                 <tr>
                     <td class="col1">이름</td>
                     <td class="col2">${diner.name}</td>

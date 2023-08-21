@@ -382,7 +382,9 @@
                                     <th scope="row">글 번호</th>
                                     <td>${board.seq}</td>
                                     <th scope="row">맛집 이름</th>
-                                    <td>${board.diner.name}</td>
+                                    <td><a target="_blank"
+                                            onClick="window.open(this.href, '', 'width=700, height=200, left=610, top=300'); return false;"
+                                            href="/diner/detail.do?seq=${board.diner.seq}">${board.diner.name}</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">작성자</th>
