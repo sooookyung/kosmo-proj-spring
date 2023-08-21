@@ -336,6 +336,35 @@
                     </script>
                 </div>
                 <!-- 작성해야 하는곳 -->
+                <style>
+                    .writebutton {
+                        margin: 0;
+                        font-family: inherit;
+                        font-size: inherit;
+                        margin-left: 1233px;
+                        margin-top: 14px;
+                        line-height: inherit;
+                    }
+
+                    h4,
+                    .h4,
+                    h2,
+                    .h2 {
+                        margin-top: 9px;
+                        margin-bottom: 0.5rem;
+                        font-weight: 500;
+                        line-height: 1.2;
+                        color: var(--bs-heading-color);
+                    }
+
+                    .board_detail tbody th {
+                        text-align: left;
+                        background-color: #f9e5e1;
+                        color: #3b3a3a;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+                </style>
 
                 <body>
                     <div class="container">
@@ -374,6 +403,31 @@
                                     </td>
                                 </tr>
                             </tbody>
+                        </table>
+                        <table class="board_detail" style="">
+                            <h4>댓글</h4>
+                            <tr>
+                                <th scope="row">작성자</th>
+                                <td>${board.writer.nickname}</td>
+                                <th scope="row">작성일</th>
+                                <td>${board.rdate}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" class="view_text">
+                                    ${board.content}
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="board_detail" style="">
+                            <h4>댓글 작성</h4>
+                            <div>
+                                <td colspan="4" class="view_text">
+                                    <textarea title="내용" id="content" name="content"></textarea>
+                                </td>
+                            </div>
+                        </table>
+                        <table class="writebutton" style="">
+                            <button class="writebutton" onclick="location.href=''">작성</button>
                         </table>
                     </div>
                 </body>
