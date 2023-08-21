@@ -22,4 +22,8 @@ public class DinerService {
     public Diner insert(Diner diner) {
         return repository.save(diner);
     }
+
+    public Diner getDiner(int seq) {
+        return repository.findById(seq).orElseThrow();
+    }
 }
