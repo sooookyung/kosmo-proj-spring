@@ -14,6 +14,10 @@ public class DinerService {
     @Autowired
     private DinerRepository repository;
 
+    public List<Diner> list() {
+        return repository.findAll();
+    }
+
     public List<Diner> list(String query) {
         // return repository.findByNameOrLocation(query);
         return repository.findByNameContaining(query); // 검증완료!
