@@ -358,8 +358,8 @@
                                     <c:forEach items="${list}" var="board">
                                         <td>${board.seq}</td>
                                     </c:forEach>
-                                    <!-- <th scope="row">카테고리</th>
-                                    <td text="${board.hitCnt}"></td> -->
+                                    <th scope="row">맛집 이름</th>
+                                    <td><a href="">${board.diner.name}</a></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">작성자</th>
