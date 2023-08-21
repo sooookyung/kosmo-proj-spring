@@ -359,7 +359,7 @@
                                         <td>${board.seq}</td>
                                     </c:forEach>
                                     <th scope="row">맛집 이름</th>
-                                    <td><a href="">${board.diner.name}</a></td>
+                                    <td>${board.diner.name}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">작성자</th>
