@@ -22,6 +22,14 @@
                     }
                     return false;
                 }
+                function check() {
+                    if (c.content.value.trim() === "") {
+                        alert("댓글을 입력하세요");
+                        return;
+                    } else {
+                        f.submit();
+                    }
+                }
             </script>
         </head>
 
@@ -408,33 +416,74 @@
                         </table>
                         <h4>댓글</h4>
                         <c:forEach items="${board.children}" var="child">
+                            <table class="board_detail">
+
+                                <tr>
+                                    <th scope="row">작성자</th>
+                                    <td>${child.writer.nickname}</td>
+                                    <th>작성일</th>
+                                    <td>${child.rdate}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="view_text">
+                                        ${child.content}
+                                    </td>
+                                </tr>
+                            </table>
+                        </c:forEach>
+                        <h4>댓글 작성</h4>
                         <table class="board_detail">
-                            
-                            <tr>
-                                <th scope="row">작성자</th>
-                                <td>${child.writer.nickname}</td>
-                                <th>작성일</th>
-                                <td>${child.rdate}</td>
-                            </tr>
-                            <tr>
-                                <td colspan="4" class="view_text">
-                                    ${child.content}
-                                </td>
-                            </tr>
-                        </table>
-                    </c:forEach>
-                    <h4>댓글 작성</h4>
-                        <table class="board_detail" style="">
-                            
                             <div>
-                                <td colspan="4" class="view_text">
-                                    <textarea title="내용" id="content" name="content"></textarea>
-                                </td>
+                                <form name="c" action="contentwrite.do" method="post">
+                                    <input type="hidden" name="email" value="${email}">
+                                    <input type="hidden" name="seq" value="${board.seq}">
+                                    <input type="hidden" name="csrfmiddlewaretoken"
+                                        value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
+                                    <td>
+                                        <textarea colspan="4" class="view_text" title="내용" name="content"
+                                            value="${email}" placeholder="댓글을 입력하세요"></textarea>
+                                    </td>
+                                    <!-- <table>
+                                            <input type="submit" class="writebutton" value="작성" />
+                                        </table> -->
+                                    <input type="submit" class="writebutton" value="작성" />
+                                </form>
                             </div>
                         </table>
-                        <table class="writebutton" style="">
-                            <button class="writebutton" onclick="location.href=''">작성</button>
-                        </table>
+                        <!-- </table>
+                            <table>
+                                <input type="button" class="writebutton" value="작성" onclick="check()" />
+                            </table> -->
+                        <!-- <form>
+                            <table class="board_detail">
+                                <div>
+                                    <td colspan="4" class="view_text">
+                                        <textarea title="내용" id="content" name="content"
+                                            placeholder="댓글을 입력하세요"></textarea>
+                                    </td>
+                                </div>
+                            </table>
+                            <table class="writebutton">
+                                <input type="hidden" name="seq">
+                                <button class="writebutton" onclick="location.href='contentwrite.do'">작성</button>
+                            </table>
+                        </form> -->
+
+                        <!-- <div class="select-wrapper-content">
+                            <form name="f" action="write.do" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="nickname" value="${nickname}">
+                                <input type="hidden" name="email" value="${email}">
+                                <input type="hidden" name="csrfmiddlewaretoken"
+                                    value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
+                                <input type="text" name="title" class="input-title" placeholder="제목입력" required></br></br>
+                                <input type="hidden" name="diner_seq">
+                                <input type="text" name="diner_name" class="input-title" placeholder="맛집입력"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal" readonly required></br></br>
+                                <textarea name="content" class="input-content"
+                                    placeholder="내용입력&#13;&#10;답변 및 처리 과정은 이메일로 확인 할 수 있습니다."></textarea></br></br>
+                                <input type="button" class="select-wrapper-button" value="작성하기" onclick="check()" />
+                                </from>
+                        </div> -->
                     </div>
                 </body>
                 <link rel="stylesheet" type="text/css" href="/css/footer.css" />

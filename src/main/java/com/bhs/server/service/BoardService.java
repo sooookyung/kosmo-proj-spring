@@ -1,6 +1,8 @@
 package com.bhs.server.service;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -50,5 +52,16 @@ public class BoardService {
         Member member = memberRepository.findByEmail(email);
         board.setWriter(member);
         repository.save(board);
+    }
+
+    public void insertcontent(String email, String content, int seq) {
+        Board board = new Board();
+        Member member = memberRepository.findByEmail(email);
+        Board parentBoard = repository.findById(seq).orElseThrow();
+        board.setWriter(member);
+        board.setContent(content);
+        board.setParent(parentBoard);
+        repository.save(board);
+
     }
 }
