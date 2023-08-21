@@ -406,22 +406,26 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <table class="board_detail" style="">
-                            <h4>댓글</h4>
+                        <h4>댓글</h4>
+                        <c:forEach items="${board.children}" var="child">
+                        <table class="board_detail">
+                            
                             <tr>
                                 <th scope="row">작성자</th>
-                                <td>${board.writer.nickname}</td>
-                                <th scope="row">작성일</th>
-                                <td>${board.rdate}</td>
+                                <td>${child.writer.nickname}</td>
+                                <th>작성일</th>
+                                <td>${child.rdate}</td>
                             </tr>
                             <tr>
                                 <td colspan="4" class="view_text">
-                                    ${board.content}
+                                    ${child.content}
                                 </td>
                             </tr>
                         </table>
+                    </c:forEach>
+                    <h4>댓글 작성</h4>
                         <table class="board_detail" style="">
-                            <h4>댓글 작성</h4>
+                            
                             <div>
                                 <td colspan="4" class="view_text">
                                     <textarea title="내용" id="content" name="content"></textarea>
