@@ -186,9 +186,7 @@
         <body style="margin:0">
             <div class="list-main">
                 <div class="list-title">
-                    <c:forEach items="${list}" var="board">
-                        <p>${board.writer.nickname}님 글이에요</p>
-                    </c:forEach>
+                    <p>${board.writer.nickname}님 글이에요</p>
                     <span></span>
                 </div>
                 <div class="col-lt">
@@ -341,9 +339,7 @@
 
                 <body>
                     <div class="container">
-                        <c:forEach items="${list}" var="board">
-                            <h2>${board.writer.nickname}님의 맛집 리뷰!</h2>
-                        </c:forEach>
+                        <h2>${board.writer.nickname}님의 맛집 리뷰!</h2>
                         <table class="board_detail" style="">
                             <colgroup>
                                 <col width="15%" />
@@ -355,39 +351,26 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">글 번호</th>
-                                    <c:forEach items="${list}" var="board">
-                                        <td>${board.seq}</td>
-                                    </c:forEach>
+                                    <td>${board.seq}</td>
                                     <th scope="row">맛집 이름</th>
-                                    <c:forEach items="${list}" var="board">
-                                        <td>${board.diner.name}</td>
-                                    </c:forEach>
+                                    <td>${board.diner.name}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">작성자</th>
-                                    <c:forEach items="${list}" var="board">
-                                        <td>${board.writer.nickname}</td>
-                                    </c:forEach>
+                                    <td>${board.writer.nickname}</td>
                                     <th scope="row">작성일</th>
-                                    <c:forEach items="${list}" var="board">
-                                        <td>${board.rdate}</td>
-                                    </c:forEach>
+                                    <td>${board.rdate}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">제목</th>
                                     <td colspan="3">
-                                        <c:forEach items="${list}" var="board">
-                                            <input type="text" id="title" name="title" value="${board.title}" />
-                                        </c:forEach>
-
+                                        <input type="text" id="title" name="title" value="${board.title}" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="4" class="view_text">
-                                        <c:forEach items="${list}" var="board">
-                                            <textarea title="내용" id="content" name="content"
-                                                readonly>${board.content}</textarea>
-                                        </c:forEach>
+                                        <textarea title="내용" id="content" name="content"
+                                            readonly>${board.content}</textarea>
                                     </td>
                                 </tr>
                             </tbody>

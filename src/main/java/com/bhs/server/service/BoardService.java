@@ -30,10 +30,11 @@ public class BoardService {
         return repository.findByParentIsNullOrderBySeqDesc();
     }
 
-    public List<Board> list(int seq) {
+    public Board getBoard(int seq) {
         // return repository.findAll(Sort.by(Sort.Direction.DESC,"seq")); //seq내림차순으로
         // 데이터 정렬
-        return repository.findBySeq(seq);
+        // return repository.findBySeq(seq);
+        return repository.findById(seq).orElseThrow();
     }
 
     public List<Board> list2(int seq) {

@@ -32,7 +32,7 @@ public class BoardController {
 
     @GetMapping("/boardcontent.do")
     public String boardcontent(Model model, int seq) { // model : jsp에 데이터를 넘겨주기위해 사용
-        model.addAttribute("list", service.list(seq));
+        model.addAttribute("board", service.getBoard(seq));
         return "boardcontent";
     }
 
