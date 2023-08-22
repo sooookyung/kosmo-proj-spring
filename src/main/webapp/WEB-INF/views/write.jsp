@@ -299,12 +299,6 @@
 					<li class="nav-menu-item">
 						<a href="/apply/0/0" class="menu-heading">지도</a>
 					</li>
-					<li class="nav-menu-item">
-						<a href="/myPage/" class="menu-heading">지원목록</a>
-					</li>
-					<li class="nav-menu-item">
-						<a href="/ask/" class="menu-heading">1:1문의</a>
-					</li>
 				</ul>
 			</nav>
 
