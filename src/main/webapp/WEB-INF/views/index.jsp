@@ -325,6 +325,14 @@
               var closeButton = document.querySelector(".login-close-button");
               var cancelButton = document.querySelector("#login-cancel");
 
+              function checkLoginThenGo(url) {
+                if ("${empty email}" === "false") {
+                  location.href = url;
+                } else {
+                  togglegodal();
+                }
+              }
+
               function togglegodal() {
                 godal.classList.toggle("show-login");
                 console.log(1);
@@ -357,10 +365,10 @@
           <a href="/introduce.do" class="menu-heading">ABOUT BHS</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/board/list.do" class="menu-heading">게시판</a>
+          <a onclick="checkLoginThenGo('/board/list.do')" class="menu-heading">게시판</a>
         </li>
         <li class="nav-menu-item">
-          <a href="/map.do" class="menu-heading">지도</a>
+          <a onclick="checkLoginThenGo('/map.do')" class="menu-heading">지도</a>
         </li>
       </ul>
     </nav>
