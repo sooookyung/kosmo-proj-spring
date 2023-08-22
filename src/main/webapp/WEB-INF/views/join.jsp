@@ -372,14 +372,6 @@
                         </span>
                     </div>
 
-                    <div class="signup-select">
-                        <h3>나이</h3>
-                        <span class="signup-input">
-                            <input name="age" id="age" type="number" title="나이" placeholder="나이를 입력하세요" maxlength="3"
-                                required="required" oninput="maxLengthCheck(this)">
-                        </span>
-                    </div>
-
                     <div class="signup-join">
                         <button type="button" class="signup-btn" onclick="check_email()">가입하기</button>
                     </div>
