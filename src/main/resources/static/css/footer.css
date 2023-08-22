@@ -2,32 +2,37 @@
     font-family: noto-black;
     src: url(font/notosans/NotoSansKR-Black.otf);
 }
+
 @font-face {
     font-family: noto-bold;
     src: url(font/notosans/NotoSansKR-Bold.otf);
 }
+
 @font-face {
     font-family: noto-light;
     src: url(font/notosans/NotoSansKR-Light.otf);
 }
+
 @font-face {
     font-family: noto-medium;
     src: url(font/notosans/NotoSansKR-Medium.otf);
 }
+
 @font-face {
     font-family: noto-regular;
     src: url(font/notosans/NotoSansKR-Regular.otf);
 }
+
 @font-face {
     font-family: noto-thin;
     src: url(font/notosans/NotoSansKR-Thin.otf);
 }
 
-:root {
-    cursor: url(/css/imgs/burger_cursor.png) 0 0, auto;
+* {
+    cursor: url(/css/imgs/burger_cursor.png) 0 0, auto !important;
 }
 
-.footer-main{
+.footer-main {
     display: block;
     background-color: #2c2a29;
     width: 100%;
@@ -35,7 +40,7 @@
     padding-top: 10px;
 }
 
-.footer-corp{
+.footer-corp {
     font-size: 0.9rem;
     text-align: center;
     padding: 0;
@@ -94,17 +99,18 @@
 .footer-info li a:focus {
     color: #F54927cc;
 }
-.footer-info li:hover{
+
+.footer-info li:hover {
     background-color: #e0c4c4;
 }
 
 
 /* 회사 주소 부분 */
-.footer-address{
+.footer-address {
     text-align: center;
 }
 
-.footer-address span{
+.footer-address span {
     padding: 10px 5px;
     display: inline-block;
     font-style: normal;
@@ -113,7 +119,7 @@
     cursor: default;
 }
 
-.footer-copyringt{
+.footer-copyringt {
     padding: 10px 0 30px 0;
     display: block;
     text-align: center;
