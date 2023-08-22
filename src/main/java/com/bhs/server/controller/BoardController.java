@@ -23,8 +23,16 @@ public class BoardController {
     BoardService service;
 
     @GetMapping("/list.do")
-    public String board(Model model) {
-        model.addAttribute("list", service.list());
+    public String board(Model model, @RequestParam(value = "diner-category", required = false) String dinerCategory) {
+        List<Board> list = null;
+        if (dinerCategory == null || dinerCategory.equals("primary")) {
+            list = service.list(); // 카테고리 선택 안함(전체 리스트)
+        } else {
+            list = service.searchDiner(dinerCategory);
+            // 카테고리별 리스트
+        }
+
+        model.addAttribute("list", list);
         return "list";
     }
 

@@ -65,4 +65,9 @@ public class BoardService {
         board.setDiner(diner);
         repository.save(board);
     }
+
+    public List<Board> searchDiner(String dinerCategory) {
+        return repository.findByDinerCategoryAndParentIsNullOrderBySeqDesc(dinerCategory);
+
+    }
 }
