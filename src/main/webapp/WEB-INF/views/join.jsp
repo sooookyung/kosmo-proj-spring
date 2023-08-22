@@ -250,7 +250,7 @@
                                             <img src="/css/imgs/main_logo.png" class="image-login">
                                         </div>
                                         <p></p>
-                                        <form name="lf" action="/login.do/" method="post">
+                                        <form name="lf" action="/login.do" method="post">
                                             <input type="hidden" name="csrfmiddlewaretoken"
                                                 value="VkkZagUmeEvZXBUt1fR1wxyfpb1Z0BjUDbIQZ5mvRkM3dge3fPdsDDJa45plpAOo">
                                             <label class="login-label" for="email">EMAIL</label>
