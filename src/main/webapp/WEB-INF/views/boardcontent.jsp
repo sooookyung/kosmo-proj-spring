@@ -179,7 +179,7 @@
                     <a href="/board/list.do" class="menu-heading">게시판</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="/apply/0/0" class="menu-heading">지도</a>
+                    <a href="/map.do" class="menu-heading">지도</a>
                 </li>
             </ul>
         </nav>

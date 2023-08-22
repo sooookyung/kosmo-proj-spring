@@ -49,8 +49,15 @@
 					<div class="nav-sign">
 						<ul class="nav-sign nav-sign-list">
 
-							<button id="login_button">LOGIN</button>
-							<button onclick="location.href='/join.do'">SIGN UP</button>
+							<c:choose>
+								<c:when test="${empty nickname}">
+									<button id="login_button">LOGIN</button>
+									<button onclick="location.href='/join.do'">SIGN UP</button>
+								</c:when>
+								<c:otherwise>
+									<button id="logout_button" onclick="location.href='/logout.do'">LOGOUT</button>
+								</c:otherwise>
+							</c:choose>
 
 							<html lang="ko">
 
