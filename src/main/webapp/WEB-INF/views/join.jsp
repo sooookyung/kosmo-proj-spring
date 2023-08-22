@@ -9,6 +9,7 @@
             <title>BHS.COM : sign-up</title>
             <link rel="stylesheet" type="text/css" href="/css/login_join.css">
             <script src="/js/trim.js"></script>
+            <script src="/js/star.js"></script>
             <script languege="javascript">
                 const regExp = /[!?@#$%^&*():;+-=~{}<>\_\[\]\|\\\"\'\,\.\/\`\₩]/g; //전체에서 특수문자 찾기
                 const blankExp = /\s/g; //전체에서 공백찾기 

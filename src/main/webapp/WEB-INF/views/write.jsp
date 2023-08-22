@@ -11,6 +11,7 @@
 			<link rel="stylesheet" href="/css/bootstrap.css">
 			<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 			<script src="/js/trim.js"></script>
+			<script src="/js/star.js"></script>
 			<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
 			<script src="/js/bootstrap.js"></script>
 			<script src="/js/util.js"></script>

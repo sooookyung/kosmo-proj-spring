@@ -13,6 +13,7 @@
             <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
             <script src="/js/bootstrap.js"></script>
             <script src="/js/trim.js"></script>
+            <script src="/js/star.js"></script>
             <script language="javascript">
                 function check_apply(co, co_no, re_no) {
                     var is_apply = confirm('[ ' + co + ' ] 사로 지원하시겠습니까?');
