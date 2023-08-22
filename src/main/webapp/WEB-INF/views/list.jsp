@@ -288,32 +288,26 @@
                         <div class="jobs_search_box">
                             <strong>관심 있는 맛집을<br>찾아보세요</strong>
                             <div class="jobs_search_field">
-                                <form name="f" action="/list/" method="post">
-                                    <input type="hidden" name="csrfmiddlewaretoken"
-                                        value="hYuKP8jAUKrwgQYkC41ayCRLbPEGcnfbZPSBEXLJxqIAwviUQEnBFI2GQJ22BmKF">
+                                <form name="f" action="/board/list.do" method="get">
                                     <div class="field1">
-                                        <select class="field1-s" name="company" id="company" title="관계사 선택"
-                                            onchange="onchange_fun(1)">
+                                        <select class="field1-s" name="diner-category" id="diner-category">
                                             <option class="field1-sel" value="primary" selected>카테고리</option>
 
+                                            <option class="field1-sel">한식</option>
 
-                                            <option class="field1-sel" value="1">한식</option>
+                                            <option class="field1-sel">양식</option>
 
-                                            <option class="field1-sel" value="2">양식</option>
+                                            <option class="field1-sel">중식</option>
 
-                                            <option class="field1-sel" value="3">중식</option>
+                                            <option class="field1-sel">일식</option>
 
-                                            <option class="field1-sel" value="4">일식</option>
+                                            <option class="field1-sel">분식</option>
 
-                                            <option class="field1-sel" value="5">분식</option>
+                                            <option class="field1-sel">아시아</option>
 
-                                            <option class="field1-sel" value="5">아시아</option>
+                                            <option class="field1-sel">카페</option>
 
-                                            <option class="field1-sel" value="5">카페</option>
-
-                                            <option class="field1-sel" value="5">기타</option>
-
-
+                                            <option class="field1-sel">기타</option>
                                         </select>
                                     </div>
 
