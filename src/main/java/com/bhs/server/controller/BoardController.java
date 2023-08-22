@@ -46,8 +46,8 @@ public class BoardController {
     }
 
     @PostMapping("/contentwrite.do")
-    public String contentwrite(String email, String content, int seq) {
-        service.insertcontent(email, content, seq);
-        return "redirect:boardcontent.do";
+    public String contentwrite(String email, String content, Integer seq, @RequestParam("diner") String dinerSeq) {
+        service.insertcontent(email, content, seq, dinerSeq);
+        return "redirect:boardcontent.do?seq=" + seq;
     }
 }

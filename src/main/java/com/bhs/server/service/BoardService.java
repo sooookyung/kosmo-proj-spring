@@ -54,14 +54,15 @@ public class BoardService {
         repository.save(board);
     }
 
-    public void insertcontent(String email, String content, int seq) {
+    public void insertcontent(String email, String content, int seq, String dinerSeq) {
         Board board = new Board();
         Member member = memberRepository.findByEmail(email);
+        Diner diner = dinerRepository.findById(Integer.parseInt(dinerSeq)).orElseThrow();
         Board parentBoard = repository.findById(seq).orElseThrow();
         board.setWriter(member);
         board.setContent(content);
         board.setParent(parentBoard);
+        board.setDiner(diner);
         repository.save(board);
-
     }
 }

@@ -42,9 +42,9 @@ public class Board {
     @ManyToOne(optional = false)
     @JoinColumn(name = "diner_seq")
     private Diner diner;
-    
+
     @ManyToOne(optional = true)
-    @JoinColumn(name = "parent", insertable = false, updatable = false)
+    @JoinColumn(name = "parent", insertable = true, updatable = false)
     private Board parent;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "parent", fetch = FetchType.EAGER)

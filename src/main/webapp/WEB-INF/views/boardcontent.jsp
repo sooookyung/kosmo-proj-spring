@@ -437,16 +437,17 @@
                                 <form name="c" action="contentwrite.do" method="post">
                                     <input type="hidden" name="email" value="${email}">
                                     <input type="hidden" name="seq" value="${board.seq}">
+                                    <input type="hidden" name="diner" value="${board.diner.seq}">
+                                    <input type="hidden" name="parent" value="${board.parent}">
                                     <input type="hidden" name="csrfmiddlewaretoken"
                                         value="PGcbvGv2t07gw7xUD9y0LGm3cHrMXQRQxxA2kvXb6GokMMRuRJUrSMxYRBP8mPmk">
                                     <td>
-                                        <textarea colspan="4" class="view_text" title="내용" name="content"
-                                            value="${email}" placeholder="댓글을 입력하세요"></textarea>
+                                        <textarea colspan="4" class="view_text" title="내용" name="content" id="content"
+                                            placeholder="댓글을 입력하세요" required></textarea>
                                     </td>
-                                    <!-- <table>
-                                            <input type="submit" class="writebutton" value="작성" />
-                                        </table> -->
-                                    <input type="submit" class="writebutton" value="작성" />
+                                    <table>
+                                        <input type="submit" class="writebutton" value="작성" />
+                                    </table>
                                 </form>
                             </div>
                         </table>
