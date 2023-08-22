@@ -99,7 +99,7 @@
                     <img src="/css/imgs/main_logo.png" class="image-login">
                   </div>
                   <p></p>
-                  <form name="lf" action="/login_ok/" method="post">
+                  <form name="lf" action="/login.do" method="post">
                     <input type="hidden" name="csrfmiddlewaretoken"
                       value="RWqB2slcMopejijsEhpp9b0BvchuFb4WzNOsRhNlp4GizXD2SRLQghbwa6FQ4azq">
                     <label class="login-label" for="email">EMAIL</label>
