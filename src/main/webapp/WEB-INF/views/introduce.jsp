@@ -291,25 +291,6 @@
               <span style="vertical-align:middle;font-size:100px;">B</span>
             </div>
 
-            <div style="text-align : center;">
-              <button class="btn" id="login_button" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img
-                  src="/css/imgs/bhs_introduce2.png"></button>
-              <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel2">서상록</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      인생은 한방이다.
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <span style="vertical-align:middle;font-size:100px;">S</span>
-            </div>
 
             <div style="text-align : center;">
               <button class="btn" id="login_button" data-bs-toggle="modal" data-bs-target="#exampleModal3"><img
@@ -330,6 +311,27 @@
               </div>
               <span style="vertical-align:middle;font-size:100px;">H</span>
             </div>
+
+            <div style="text-align : center;">
+              <button class="btn" id="login_button" data-bs-toggle="modal" data-bs-target="#exampleModal2"><img
+                  src="/css/imgs/bhs_introduce2.png"></button>
+              <div class="modal" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel2">서상록</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      인생은 한방이다.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span style="vertical-align:middle;font-size:100px;">S</span>
+            </div>
+
 
           </div>
         </div>

@@ -171,7 +171,7 @@
                         <a href="/board/list.do" class="menu-heading">게시판</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="/apply/0/0" class="menu-heading">지도</a>
+                        <a href="/map.do" class="menu-heading">지도</a>
                     </li>
                 </ul>
             </nav>
@@ -305,43 +305,22 @@
 
                                             <option class="field1-sel" value="4">일식</option>
 
-                                            <option class="field1-sel" value="5">디저트</option>
+                                            <option class="field1-sel" value="5">분식</option>
+
+                                            <option class="field1-sel" value="5">아시아</option>
+
+                                            <option class="field1-sel" value="5">카페</option>
+
+                                            <option class="field1-sel" value="5">기타</option>
 
 
                                         </select>
                                     </div>
-                                    <div class="field2">
-                                        <select class="field2-s" name="sector" id="sector" title="관계사 선택"
-                                            onchange="onchange_fun(2)">
-                                            <option class="field2-sel" value="primary" selected>직무</option>
 
-
-                                            <option class="field2-sel" value="프론트엔드">프론트엔드</option>
-
-                                            <option class="field2-sel" value="DB관리자">DB관리자</option>
-
-                                            <option class="field2-sel" value="퍼블리셔">퍼블리셔</option>
-
-                                            <option class="field2-sel" value="SI, SM">SI, SM</option>
-
-                                            <option class="field2-sel" value="SM">SM</option>
-
-                                            <option class="field2-sel" value="퍼블리셔, UI/UX디자인">퍼블리셔, UI/UX디자인</option>
-
-                                            <option class="field2-sel" value="SI">SI</option>
-
-                                            <option class="field2-sel" value="백엔드 개발">백엔드 개발</option>
-
-                                            <option class="field2-sel" value="프론트엔드 개발">프론트엔드 개발</option>
-
-
-                                        </select>
-                                    </div>
                                     <button class="search-btn" type="submit" id="search" title="검색하기">검색</button>
                                 </form>
                             </div>
-                            <button class="reset-btn" onclick="onreset_fun()" title="검색조건 초기화">검색조건
-                                초기화<!--검색조건 초기화--></button>
+
                         </div>
 
 
