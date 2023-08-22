@@ -49,6 +49,7 @@
     color: #F54927;
     font-family: noto-regular;
     cursor: default;
+    left: 45px;
 }
 
 .jobs_search_box.sticky {
