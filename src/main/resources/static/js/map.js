@@ -1,6 +1,6 @@
 const mapOptions = {
-  center: new naver.maps.LatLng(37.4769839, 126.879243),
-  zoom: 1,
+  center: new naver.maps.LatLng(36.6549556, 127.9704944),
+  zoom: 8,
 };
 
 const map = new naver.maps.Map("map", mapOptions);
