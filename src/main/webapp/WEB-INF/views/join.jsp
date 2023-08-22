@@ -178,7 +178,7 @@
                         <ul class="nav-sign nav-sign-list">
 
                             <button id="login_button">LOGIN</button>
-                            <button onclick="location.href='/join/'">SIGN UP</button>
+                            <button onclick="location.href='/join.do'">SIGN UP</button>
 
 
                             <html lang="ko">
@@ -249,7 +249,7 @@
                                             <img src="/css/imgs/main_logo.png" class="image-login">
                                         </div>
                                         <p></p>
-                                        <form name="lf" action="/login_ok/" method="post">
+                                        <form name="lf" action="/login.do/" method="post">
                                             <input type="hidden" name="csrfmiddlewaretoken"
                                                 value="VkkZagUmeEvZXBUt1fR1wxyfpb1Z0BjUDbIQZ5mvRkM3dge3fPdsDDJa45plpAOo">
                                             <label class="login-label" for="email">EMAIL</label>
