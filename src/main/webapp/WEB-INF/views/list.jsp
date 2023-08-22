@@ -43,8 +43,6 @@
                                     <button id="logout_button" onclick="location.href='/logout.do'">LOGOUT</button>
                                 </c:otherwise>
                             </c:choose>
-                            <button onclick="location.href='/join.do'">SIGN UP</button>
-
 
                             <html lang="ko">
 
