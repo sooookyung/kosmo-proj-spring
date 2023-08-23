@@ -1,8 +1,6 @@
 package com.bhs.server.controller;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bhs.server.domain.Board;
-import com.bhs.server.domain.Member;
 import com.bhs.server.service.BoardService;
 
 @Controller
