@@ -352,8 +352,8 @@ insert into board (title, content, writer, diner_seq, parent) values ('같이 �
 insert into board (title, content, writer, diner_seq, parent) values ('라떼가 맛있어요', '비싼 원두를 쓰나?', 'hsk@bhs.com', (select seq from diner where name='르셀'), null);
 insert into board (title, content, writer, diner_seq, parent) values ('여기 맛있음2', 'ㄱㄱㄱ', 'sol@bhs.com', (select seq from diner where name='모리라멘&돈카츠'), null);
 insert into board (title, content, writer, diner_seq, parent) values ('분위기가 좋아요', '모던한 느낌의 카페', 'hsk@bhs.com', (select seq from diner where name='카페이마'), null);
-insert into board (title, content, writer, diner_seq, parent) values ('고기가 최고야', '하하', 'sang@bhs.com', (select seq from diner where name='카레'), null);
-insert into board (title, content, writer, diner_seq, parent) values ('성북 최고의 제과점', '안가면 손해', 'hsk@bhs.com', (select seq from diner where name='만동제과'), null);
+insert into board (title, content, writer, diner_seq, parent) values ('고기가 최고야', '하하', 'sang@bhs.com', (select seq from diner where name='가산통통생고기'), null);
+insert into board (title, content, writer, diner_seq, parent) values ('연희동 최고의 제과점', '안가면 손해', 'hsk@bhs.com', (select seq from diner where name='만동제과'), null);
 insert into board (title, content, writer, diner_seq, parent) values ('햄버거가 최고야', '소울푸드ㄷㄷ', 'sol@bhs.com', (select seq from diner where name='티제이버거'), null);
 insert into board (title, content, writer, diner_seq, parent) values ('이름이 특이해요', '빵야빵야빵야 ㅋㅋ', 'sang@bhs.com', (select seq from diner where name='빵빵빵'), null);
 
