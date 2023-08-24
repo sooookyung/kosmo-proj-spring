@@ -4,6 +4,7 @@ insert into MEMBER (email, nickname, pwd, name, ph, age) values ('hsk@bhs.com', 
 insert into MEMBER (email, nickname, pwd, name, ph, age) values ('sang@bhs.com', 'sang', '1234', '서상록', '01014702580', 25);
 commit;
 
+SET DEFINE OFF;
 Insert into DINER (NAME,LOCATION,CATEGORY,FILE_ID) values ('카레','서울 성북구 성북로 62-1','아시아',null);
 Insert into DINER (NAME,LOCATION,CATEGORY,FILE_ID) values ('야상해','서울 용산구 이태원로23길 6','중식',null);
 Insert into DINER (NAME,LOCATION,CATEGORY,FILE_ID) values ('문치비','제주 서귀포시 신서로32번길 14','한식',null);
