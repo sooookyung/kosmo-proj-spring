@@ -5,7 +5,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.bhs.server.domain.Board;
 import com.bhs.server.domain.Diner;
 import com.bhs.server.repository.DinerRepository;
 

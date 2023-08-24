@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bhs.server.domain.Diner;
 import com.bhs.server.service.DinerService;
 
-import oracle.jdbc.proxy.annotation.Post;
-
 @Controller
 @RequestMapping("/diner")
 public class DinerController {
