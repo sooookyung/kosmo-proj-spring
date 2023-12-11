@@ -1,4 +1,4 @@
-# kosmo-proj-spring
+#  kosmo-proj-spring
 
 - - -
 
@@ -12,6 +12,7 @@
 - - - 
 # 프로젝트 설명
 
+![mainpage](https://github.com/sooookyung/bhs_project/assets/142128972/9390f788-a1c7-462a-af89-0861190f8bab)
 - - - 
 # 개발기간
 * 2023/09/18 ~ 2023/10/20
