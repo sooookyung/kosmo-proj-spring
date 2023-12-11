@@ -25,7 +25,22 @@ Spring Boot를 이용한 맛집 공유 게시판 사이트 BHS
 # 개발기간
 * 2023/08/16 ~ 2023/08/25
 
+
 - - -
 # 데이터베이스(DB)설계 
 ![논리 물리모델링](https://github.com/sooookyung/bhs_project/assets/142128972/60bd1bc5-03f3-4612-86ee-a0b021e3191a)
 
+
+- - - 
+# Languages and Tools
+
+<img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+
+- - - 
+# 기능소개
+* 메인 화면에는 음식 이미지 슬라이드쇼 구현
+* 사이트 소개 페이지 구현
+* 게시판/댓글 기능 구현
+* 게시판 카테고리 분류 기능 구현
+* 지도API로 맛집 정보의 위치 표시 기능 구현
+* 로그인/회원가입/로그인 유지
