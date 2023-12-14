@@ -2,7 +2,7 @@
 - - -
 
 # 📋 목차
-### 1. [프로젝트 설명](https://github.com/sooookyung/kosmo-proj-spring#프로젝트-설명 "프로젝트설명")           
+### 1. [프로젝트 설명](https://github.com/sooookyung/kosmo-proj-spring#프로젝트-설명 "🚀 프로젝트설명")           
 ### 2. [개발기간](https://github.com/sooookyung/kosmo-proj-spring#개발기간 "개발기간")    
 ### 3. [데이터베이스(DB) 설계](https://github.com/sooookyung/kosmo-proj-spring#데이터베이스db설계 "db설계")         
 ### 4. [사용기술](https://github.com/sooookyung/kosmo-proj-spring#Languages-and-Tools "사용기술")         
